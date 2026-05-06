@@ -1,0 +1,223 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-primary-container": "#a88f6d", "on-surface-variant": "#434843", "on-error": "#ffffff", "inverse-surface": "#323129", "primary-fixed": "#fbdeb8", "surface-dim": "#dedace", "on-secondary-container": "#556d00", "tertiary-fixed": "#d1e4ff", "on-tertiary-fixed": "#001d36", "tertiary-container": "#002d50", "secondary-fixed-dim": "#abd61c", "on-background": "#1d1c15", "primary-fixed-dim": "#dec29d", "surface-container-lowest": "#ffffff", "secondary-fixed": "#c6f33e", "on-primary-fixed-variant": "#574427", secondary: "#506600", "on-tertiary-fixed-variant": "#1a4974", "on-primary-fixed": "#271903", "on-tertiary-container": "#6d96c6", background: "#fdf9ed", primary: "#221401", "on-secondary": "#ffffff", "on-primary": "#ffffff", "surface-container-highest": "#e6e2d6", "surface-container": "#f2eee2", "on-tertiary": "#ffffff", "inverse-on-surface": "#f5f1e4", "surface-tint": "#705b3d", "on-secondary-fixed-variant": "#3b4d00", "surface-variant": "#e6e2d6", "surface-container-high": "#ece8dc", "on-surface": "#1d1c15", "surface-bright": "#fdf9ed", error: "#ba1a1a", "error-container": "#ffdad6", tertiary: "#00182f", "inverse-primary": "#dec29d", "primary-container": "#39290f", surface: "#fdf9ed", outline: "#737973", "on-secondary-fixed": "#161f00", "tertiary-fixed-dim": "#a0cafc", "outline-variant": "#c3c8c1", "surface-container-low": "#f8f3e7", "on-error-container": "#93000a", "secondary-container": "#c6f33e"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"container-max": "1280px", "section-gap": "120px", unit: "8px", "margin-page": "64px", gutter: "24px"}, fontFamily: {"label-caps": ["Manrope"], "data-mono": ["Manrope"], h1: ["Newsreader"], "body-lg": ["Manrope"], h3: ["Newsreader"], "body-md": ["Manrope"], h2: ["Newsreader"]}, fontSize: {"label-caps": ["12px", {lineHeight: "1", letterSpacing: "0.1em", fontWeight: "700"}], "data-mono": ["14px", {lineHeight: "1", fontWeight: "600"}], h1: ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], h3: ["24px", {lineHeight: "1.3", fontWeight: "400"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], h2: ["36px", {lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "500"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fdf9ed;
+            color: #1d1c15;
+            -webkit-font-smoothing: antialiased;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#F8F7F2] dark:bg-stone-950 border-b border-[#1B3022]/15 dark:border-stone-800">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto">
+<span class="text-2xl font-bold font-serif tracking-tighter text-[#1B3022] dark:text-stone-50">Quantta</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-[#1B3022] border-b-2 border-[#D4F953] pb-1 hover:text-[#1B3022] transition-all duration-300" href="#">Nuestro Enfoque</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-[#1B3022]/60 dark:text-stone-400 hover:text-[#1B3022] transition-all duration-300" href="#">Experiencia</a>
+<a class="font-serif tracking-tight text-sm uppercase font-semibold text-[#1B3022]/60 dark:text-stone-400 hover:text-[#1B3022] transition-all duration-300" href="#">Contacto</a>
+</div>
+<button class="bg-[#D4F953] text-[#1B3022] px-6 py-2.5 font-label-caps text-label-caps rounded-full hover:opacity-90 active:scale-95 transition-all">
+                Agendar Diagnóstico
+            </button>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-[1440px] mx-auto px-12 mb-32">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 md:col-span-7">
+<span class="font-label-caps text-label-caps text-secondary mb-6 block uppercase tracking-widest">Estrategia &amp; Claridad</span>
+<h1 class="font-h1 text-h1 text-primary-container mb-8 leading-[1.1]">
+                        Los negocios no fallan por falta de oportunidades, fallan por <span class="italic underline decoration-[#D4F953] decoration-4 underline-offset-4">falta de claridad.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
+                        Convertimos la complejidad en números que sí sirven para decidir. <br>Para negocios que construyen con visión de largo plazo.</p>
+<div class="flex gap-4">
+<button class="bg-secondary-container text-primary-container font-label-caps text-label-caps px-8 py-4 rounded-full flex items-center gap-2 hover:shadow-lg transition-all">AGENDAR DIAGNÓSTICO<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-primary-container/20 text-primary-container font-label-caps text-label-caps px-8 py-4 rounded-full hover:bg-primary-container/5 transition-all"><br></button>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container-high rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]" data-alt="Modern high-end office interior with minimalist furniture, deep green accents, and large windows with soft natural lighting, editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSLwJyGwPQPayjUYIXBZYt6WEFVQuiXcRFk3eRPjLd2x83n4pdhhbYPpE-iqLFcnnpD1-HYx4s7pLdgCgqh7rfPKRRshAF5Yu6F-oWJ0KdpXoJXcJLkpYuorXPSZF49W1KYnG05aMeorjiXbX602vudvZeymWtCsl0fNxoSjwm-CqOB9Zc0t4xHuj6kWy7ZEF2_bhGiLvdRukhEfJtL5MMmK3d_t_RRdZ_Sd_Uxj1jkItaYdIudOdAh7bP9QTUtPsNy1NgLWWIWdo">
+</div>
+<!-- Tactile Overlay Card -->
+<div class="absolute -bottom-10 -left-10 bg-white p-8 border border-primary/10 shadow-xl max-w-[280px]">
+<p class="font-data-mono text-data-mono text-secondary mb-2">PROYECCIÓN FINANCIERA</p>
+<p class="font-h3 text-h3 text-primary-container leading-tight">Modelos que vuelven escenarios complejos en decisiones accionables.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Expertise Section -->
+<section class="bg-primary-container py-32 text-white">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="mb-20">
+<span class="font-label-caps text-label-caps text-secondary-fixed mb-4 block uppercase tracking-widest">Experiencia</span>
+<h2 class="font-h2 text-h2 text-surface-bright max-w-2xl">Legacy Evolved: Evolución estratégica para empresas con historia.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 pt-16">
+<div class="space-y-6">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl">account_balance</span>
+<h3 class="font-h3 text-h3">Gobierno Corporativo</h3>
+<p class="font-body-md text-on-primary-container">Ordenamos la toma de decisiones, los roles y los procesos clave sin borrar la esencia del negocio.</p>
+</div>
+<div class="space-y-6">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl">trending_up</span>
+<h3 class="font-h3 text-h3">Eficiencia de Capital</h3>
+<p class="font-body-md text-on-primary-container">Optimización de flujos de caja y estructuras de costos para maximizar el valor del accionista.</p>
+</div>
+<div class="space-y-6">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl">diversity_3</span>
+<h3 class="font-h3 text-h3">Protocolo Familiar</h3>
+<p class="font-body-md text-on-primary-container">Acuerdos claros para alinear familia, propiedad y empresa alrededor de una visión común.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Operational Systems (Bento Grid) -->
+<section class="py-32 max-w-[1440px] mx-auto px-12">
+<div class="flex justify-between items-end mb-16">
+<div class="max-w-xl">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block uppercase tracking-widest">Operaciones Modernas</span>
+<h2 class="font-h2 text-h2">Modelos de negocio listos para el futuro digital.</h2>
+</div>
+<button class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1">VER TODOS LOS SERVICIOS</button>
+</div>
+<div class="bento-grid h-[600px]">
+<div class="col-span-12 md:col-span-8 bg-surface-container border border-primary/5 p-12 flex flex-col justify-between group cursor-pointer transition-all hover:bg-surface-container-high">
+<div>
+<h3 class="font-h3 text-h3 mb-4">AI &amp; Automation Audit</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">No implementamos tecnología por moda. Auditamos sus procesos actuales y automatizamos donde el ROI es inmediato.</p>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-white border border-primary/10 rounded-full font-data-mono text-[10px]">REDUCCIÓN COSTOS 30%</span>
+<span class="px-3 py-1 bg-white border border-primary/10 rounded-full font-data-mono text-[10px]">LISTO PARA ESCALAR</span>
+</div>
+<span class="material-symbols-outlined text-4xl group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-[#E8E4D8] border border-primary/5 p-12 flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-6xl text-secondary mb-6">insights</span>
+<h3 class="font-h3 text-h3 mb-2">Business Review</h3>
+<p class="font-body-md text-on-surface-variant">Diagnóstico de 360 grados de su modelo operativo actual.</p>
+</div>
+<div class="col-span-12 md:col-span-4 bg-primary-container text-white p-12 flex items-center justify-between">
+<h3 class="font-h3 text-h3">Inteligencia Financiera</h3>
+<span class="material-symbols-outlined text-secondary-fixed">query_stats</span>
+</div>
+<div class="col-span-12 md:col-span-8 overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700" data-alt="Abstract data visualization dashboard displayed on a sleek glass tablet in a professional dark-toned setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0ZpQMfmVgOxHqcop70-0PoLW9DgCBnJmn0HAbOt8Wzw-NB4b1E2qqDqfc9_hIy35jS6wqyvoxEJOlh9h45A4jS13esQUioWTujoMJwMYQFYRjR4kMtEz4i8sO_1GhJrwjmwe3OFX59wwg-m5y0gbRWPlBeay1Fg0slgf4zmmqrUgG82v8TT5YtrUm32DyO79oBkZXG9Pti41Cmv4QfzNVHkmjmnLaencbxYFGeZCjCLHKFE8YtZdXjUKOFM7-tp8jJyyVfP7tsd8">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-8">
+<p class="font-label-caps text-label-caps text-secondary-fixed">INSIGHTS EN TIEMPO REAL</p>
+<h4 class="text-white font-h3 text-h3">Dashboard de Mando Integral</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Partnership Section -->
+<section class="py-32 bg-white border-y border-primary/5">
+<div class="max-w-[1440px] mx-auto px-12 flex flex-col md:flex-row items-center gap-20">
+<div class="md:w-1/2">
+<div class="w-24 h-1 bg-secondary-fixed mb-8"></div>
+<h2 class="font-h2 text-h2 mb-8 leading-tight">"Right Next To You": No somos consultores externos, somos socios de crecimiento.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                        La consultoría tradicional entrega un reporte y se retira. Quanta se sienta en la mesa de consejo. Acompañamos la ejecución hasta que los resultados se reflejan en el estado de resultados.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<span class="font-body-md font-semibold">Involucramiento en toma de decisiones críticas</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<span class="font-body-md font-semibold">Estructura de honorarios basada en éxito</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<span class="font-body-md font-semibold">Red de contactos estratégica en México</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-4">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="Two professionals in a deep forest green boardroom having a serious strategic discussion, overhead lighting" src="https://yucatan.travel/wp-content/uploads/2021/01/Yucat%C3%A1n-Casas-Gemelas-Montejo495-Casa-Museo-Cultura-PaseoMontejo-Merida-1-1.jpg">
+</div>
+<div class="aspect-square bg-secondary-container flex items-center justify-center p-8 text-center">
+<h4 class="font-h3 text-h3 text-primary-container">Presencia en Mérida y CDMX</h4>
+</div>
+<div class="col-span-2 aspect-[2/1] bg-surface-container-high rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-[#1B3022]/10 z-10"></div>
+<img class="w-full h-full object-cover" data-alt="Modern architectural lines of a skyscraper reflecting the sky, representing corporate stability and growth" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/5b/c9/57/caption.jpg?w=900&amp;h=500&amp;s=1">
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Final -->
+<section class="py-32 text-center max-w-4xl mx-auto px-12">
+<h2 class="font-h1 text-h1 mb-8">¿Listo para traer claridad a su estructura empresarial?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Agende una sesión de diagnóstico inicial de 45 minutos sin costo.&nbsp;</p><div class="">Exclusivo para directivos y dueños de negocio.</div><p class=""></p>
+<div class="inline-flex items-center gap-6 p-2 bg-white border border-primary/10 rounded-full shadow-sm">
+<input class="border-none focus:ring-0 bg-transparent px-6 font-body-md w-64" placeholder="correo@empresa.com" type="email">
+<button class="bg-primary text-white font-label-caps text-label-caps px-8 py-3 rounded-full hover:bg-primary/90 transition-all">
+                    SOLICITAR SESIÓN
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-[#F8F7F2] dark:bg-stone-950 border-t border-[#1B3022]/15 dark:border-stone-800">
+<div class="grid grid-cols-12 gap-8 px-12 max-w-[1440px] mx-auto">
+<div class="col-span-12 md:col-span-4">
+<span class="font-serif text-lg font-bold text-[#1B3022] dark:text-stone-50 block mb-4">Quanta</span>
+<p class="font-serif text-xs tracking-wide text-[#1B3022]/50 dark:text-stone-500 max-w-xs">
+                    Consultoría estratégica para empresas que buscan claridad operativa, financiera y organizacional.
+                </p>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-caps text-[10px] uppercase text-primary mb-6">Oficinas</h5>
+<ul class="space-y-3">
+<li class=""><a class="font-serif text-xs tracking-wide text-[#1B3022]/50 dark:text-stone-500 hover:text-[#D4F953] transition-colors underline" href="#">CDMX</a></li>
+<li class=""><ul class="space-y-3" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;"><li class="cursor-text" spellcheck="false" data-stitch-added-classes="cursor-text" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; --tw-space-y-reverse: 0; margin-top: 12px; margin-bottom: 0px; outline: none !important;"><a class="font-serif text-xs tracking-wide text-[#1B3022]/50 dark:text-stone-500 hover:text-[#D4F953] transition-colors underline cursor-text" href="https://app-companion-430619.appspot.com/projects/2923581833618767451?pli=1&amp;usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.gSqfLc8WnvU.O%2Fd%3D1%2Frs%3DAHpOoo_cXXGArE2dtw6vkGR2NQ_1f5L3AQ%2Fm%3D__features__#" spellcheck="false" data-stitch-added-classes="cursor-text" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;">Mérida</a></li></ul></li>
+<li class=""><br></li>
+</ul>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-caps text-[10px] uppercase text-primary mb-6">Legal</h5>
+<ul class="space-y-3">
+<li class=""><a class="font-serif text-xs tracking-wide text-[#1B3022]/50 dark:text-stone-500 hover:text-[#D4F953] transition-colors underline" href="#">Aviso de Privacidad</a></li>
+<li class=""><a class="font-serif text-xs tracking-wide text-[#1B3022]/50 dark:text-stone-500 hover:text-[#D4F953] transition-colors underline" href="#">Términos de Servicio</a></li>
+<li class=""><a class="font-serif text-xs tracking-wide text-[#1B3022]/50 dark:text-stone-500 hover:text-[#D4F953] transition-colors underline" href="#">Cookies</a></li>
+</ul>
+</div>
+<div class="col-span-12 md:col-span-4 flex flex-col md:items-end justify-between">
+<div class="flex gap-4 mb-8 md:mb-0">
+<span class="material-symbols-outlined text-primary-container">language</span>
+<span class="material-symbols-outlined text-primary-container">shield</span>
+</div>
+<span class="font-serif text-xs tracking-wide text-[#1B3022]/50 dark:text-stone-500">
+                    © 2026 Quanta Strategic Consulting. Todos los derechos reservados.
+                </span>
+</div>
+</div>
+</footer>
+
+
+</body></html>

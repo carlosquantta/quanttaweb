@@ -1,542 +1,153 @@
-<!DOCTYPE html>
-<html class="light" lang="es">
-<head>
-<meta charset="UTF-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Quantta Strategic Consulting — Estrategia &amp; Sistemas para empresas con visión de largo plazo</title>
-<meta name="description" content="Convertimos la complejidad en números que sí sirven para decidir. Gobierno corporativo, eficiencia de capital y protocolo familiar para negocios en México.">
-<meta property="og:title" content="Quantta Strategic Consulting">
-<meta property="og:description" content="Consultoría estratégica para empresas que buscan claridad operativa, financiera y organizacional. Mérida y CDMX.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#fdf9ed">
-<link rel="canonical" href="https://project-2lq5x.vercel.app/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdn.tailwindcss.com">
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+      <!-- Card 3+4: SVG Dashboard -->
+      <div class="bento-card col-span-12 rounded-xl overflow-hidden reveal reveal-delay-1"
+           style="background:linear-gradient(150deg,#1c1005 0%,#0d0900 55%,#111005 100%);
+                  border:1px solid rgba(255,255,255,0.06);position:relative;">
 
-<script id="tailwind-config">
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "on-primary-container": "#a88f6d",
-        "on-surface-variant": "#434843",
-        "inverse-surface": "#323129",
-        "primary-fixed": "#fbdeb8",
-        "surface-dim": "#dedace",
-        "on-secondary-container": "#556d00",
-        "on-background": "#1d1c15",
-        "primary-fixed-dim": "#dec29d",
-        "surface-container-lowest": "#ffffff",
-        "secondary-fixed": "#c6f33e",
-        "on-primary-fixed": "#271903",
-        "on-tertiary-container": "#6d96c6",
-        background: "#fdf9ed",
-        primary: "#221401",
-        "on-secondary": "#ffffff",
-        "on-primary": "#ffffff",
-        "surface-container-highest": "#e6e2d6",
-        "surface-container": "#f2eee2",
-        "on-tertiary": "#ffffff",
-        "inverse-on-surface": "#f5f1e4",
-        "surface-tint": "#705b3d",
-        "on-secondary-fixed-variant": "#3b4d00",
-        "surface-variant": "#e6e2d6",
-        "surface-container-high": "#ece8dc",
-        "on-surface": "#1d1c15",
-        "surface-bright": "#fdf9ed",
-        error: "#ba1a1a",
-        tertiary: "#00182f",
-        "inverse-primary": "#dec29d",
-        "primary-container": "#39290f",
-        surface: "#fdf9ed",
-        outline: "#737973",
-        "on-secondary-fixed": "#161f00",
-        "outline-variant": "#c3c8c1",
-        "surface-container-low": "#f8f3e7",
-        "on-error-container": "#93000a",
-        secondary: "#506600",
-        "secondary-container": "#c6f33e",
-      },
-      borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" },
-      fontFamily: {
-        "label-caps": ["Manrope"],
-        "data-mono": ["Manrope"],
-        h1: ["Newsreader"],
-        "body-lg": ["Manrope"],
-        h3: ["Newsreader"],
-        "body-md": ["Manrope"],
-        h2: ["Newsreader"],
-      },
-      fontSize: {
-        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "700" }],
-        "data-mono": ["14px", { lineHeight: "1", fontWeight: "600" }],
-        h1: ["56px", { lineHeight: "1.05", letterSpacing: "-0.02em", fontWeight: "500" }],
-        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
-        h3: ["24px", { lineHeight: "1.3", fontWeight: "400" }],
-        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
-        h2: ["40px", { lineHeight: "1.15", letterSpacing: "-0.02em", fontWeight: "500" }],
-      }
-    }
-  }
-};
-</script>
+        <!-- Glow orbs -->
+        <div style="position:absolute;top:-120px;right:0%;width:520px;height:520px;border-radius:50%;
+                    background:radial-gradient(circle,rgba(198,243,62,0.07) 0%,transparent 65%);
+                    pointer-events:none;z-index:0;"></div>
+        <div style="position:absolute;bottom:-100px;left:5%;width:360px;height:360px;border-radius:50%;
+                    background:radial-gradient(circle,rgba(128,169,218,0.06) 0%,transparent 65%);
+                    pointer-events:none;z-index:0;"></div>
 
-<style>
-  *, ::before, ::after { box-sizing: border-box; }
+        <div style="position:relative;z-index:1;padding:2.5rem 3rem 2rem;display:flex;flex-direction:column;gap:1.5rem;">
 
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background-color: #fdf9ed;
-    color: #1d1c15;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-  }
-
-  /* ── SCROLL REVEAL ── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .reveal.is-visible { opacity: 1; transform: translateY(0); }
-  .reveal-delay-1 { transition-delay: 0.08s; }
-  .reveal-delay-2 { transition-delay: 0.16s; }
-  .reveal-delay-3 { transition-delay: 0.24s; }
-  .reveal-delay-4 { transition-delay: 0.32s; }
-
-  /* ── MESH DARK SECTIONS ── */
-  .mesh-section {
-    position: relative;
-    background-color: #1a1200 !important;
-    overflow: hidden;
-    z-index: 1;
-  }
-  .mesh-content { position: relative; z-index: 10; }
-  .mesh-blob {
-    position: absolute;
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    filter: blur(130px);
-    opacity: 0.3;
-    will-change: transform;
-    animation: meshMove infinite alternate ease-in-out;
-    pointer-events: none;
-    z-index: 2;
-  }
-  .blob-green { background: #C8FF3A; }
-  .blob-blue  { background: #6B9ED4; }
-
-  @keyframes meshMove {
-    0%   { transform: translate(0, 0)       rotate(0deg)  scale(1); }
-    100% { transform: translate(28vw, 18vh) rotate(80deg) scale(1.25); }
-  }
-
-  .mesh-grain {
-    position: absolute; inset: 0; z-index: 5; pointer-events: none; opacity: 0.12;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
-  /* Spotlight cursor in mesh section */
-  .spotlight {
-    position: absolute;
-    width: 700px; height: 700px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(200,255,58,0.07) 0%, transparent 65%);
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: left 0.12s ease-out, top 0.12s ease-out;
-    z-index: 3;
-  }
-
-  /* ── MARQUEE ── */
-  .marquee-wrapper { overflow: hidden; }
-  .marquee-track {
-    display: flex;
-    gap: 0;
-    animation: marquee 26s linear infinite;
-    width: max-content;
-  }
-  .marquee-track:hover { animation-play-state: paused; }
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-
-  /* ── GLASSMORPHISM ── */
-  .glass-card {
-    background: rgba(255,255,255,0.72);
-    backdrop-filter: blur(24px) saturate(1.6);
-    -webkit-backdrop-filter: blur(24px) saturate(1.6);
-    border: 1px solid rgba(255,255,255,0.6);
-  }
-
-  /* ── SHIMMER CTA ── */
-  @keyframes shimmer {
-    from { background-position: -200% center; }
-    to   { background-position:  200% center; }
-  }
-  .btn-shimmer {
-    background: linear-gradient(110deg, #D4F953 40%, #f0ffb0 50%, #D4F953 60%);
-    background-size: 200% auto;
-    animation: shimmer 2.8s linear infinite;
-  }
-
-  /* ── FLOATING CARD ── */
-  @keyframes float {
-    0%, 100% { transform: translateY(0px);  }
-    50%       { transform: translateY(-10px); }
-  }
-  .floating { animation: float 5s ease-in-out infinite; }
-
-  /* ── BENTO ── */
-  .bento-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 16px;
-  }
-  .bento-card {
-    transition: transform 0.35s cubic-bezier(0.16,1,0.3,1),
-                box-shadow 0.35s cubic-bezier(0.16,1,0.3,1),
-                background 0.3s ease;
-  }
-  .bento-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 24px 48px -12px rgba(0,0,0,0.12);
-  }
-
-  /* ── EXPERTISE CARDS ── */
-  .expertise-card {
-    padding: 2rem;
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 0.5rem;
-    background: rgba(255,255,255,0.03);
-    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  .expertise-card::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(200,255,58,0.06) 0%, transparent 60%);
-    opacity: 0; transition: opacity 0.3s ease;
-  }
-  .expertise-card:hover {
-    background: rgba(255,255,255,0.06);
-    border-color: rgba(200,255,58,0.2);
-    transform: translateY(-3px);
-  }
-  .expertise-card:hover::before { opacity: 1; }
-
-  /* ── NAV ── */
-  nav { backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); }
-
-  /* ── GRADIENT ACCENT LINE ── */
-  .accent-bar {
-    height: 3px;
-    background: linear-gradient(90deg, #D4F953, #a8e824, #D4F953);
-    background-size: 200% auto;
-    animation: shimmer 3s linear infinite;
-    border-radius: 2px;
-  }
-
-  /* ── STAT ITEMS ── */
-  .stat-num {
-    font-family: Newsreader;
-    font-size: 44px;
-    font-weight: 500;
-    letter-spacing: -0.03em;
-    line-height: 1;
-  }
-
-  /* ── PARTNERSHIP GRID ── */
-  .partnership-photo {
-    transition: transform 0.6s cubic-bezier(0.16,1,0.3,1), filter 0.4s ease;
-  }
-  .partnership-photo:hover { transform: scale(1.04); filter: saturate(1.2); }
-
-  /* ── CTA SECTION ── */
-  .cta-bg {
-    background: linear-gradient(135deg, #2a1a05 0%, #39290f 50%, #1e1000 100%);
-    position: relative;
-    overflow: hidden;
-  }
-  .cta-bg::before {
-    content: '';
-    position: absolute;
-    width: 600px; height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(212,249,83,0.12) 0%, transparent 70%);
-    top: -200px; right: -100px;
-    pointer-events: none;
-  }
-  .cta-bg::after {
-    content: '';
-    position: absolute;
-    width: 400px; height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(128,169,218,0.1) 0%, transparent 70%);
-    bottom: -150px; left: -50px;
-    pointer-events: none;
-  }
-
-  /* ── FOOTER ── */
-  .footer-bg { background: #f8f7f2; }
-</style>
-</head>
-
-<body class="font-body-md text-on-surface">
-
-<!-- ── TOP NAV ── -->
-<nav class="fixed top-0 w-full z-50 bg-[#F8F7F2]/80 border-b border-[#1B3022]/10">
-  <div class="flex justify-between items-center px-8 md:px-12 py-5 max-w-[1440px] mx-auto">
-    <a href="#">
-      <!-- Replace src with your actual logo path -->
-      <img src="./index_files/horizontal-cafe.svg" alt="Quantta" class="h-7">
-    </a>
-    <div class="hidden md:flex items-center gap-8">
-      <a class="nav-link font-label-caps text-label-caps text-[#1B3022]/50 hover:text-[#1B3022] transition-all duration-300 pb-1 border-b-2 border-transparent" data-section="experiencia" href="#experiencia">Experiencia</a>
-      <a class="nav-link font-label-caps text-label-caps text-[#1B3022]/50 hover:text-[#1B3022] transition-all duration-300 pb-1 border-b-2 border-transparent" data-section="enfoque" href="#enfoque">Enfoque</a>
-      <a class="nav-link font-label-caps text-label-caps text-[#1B3022]/50 hover:text-[#1B3022] transition-all duration-300 pb-1 border-b-2 border-transparent" data-section="metodo" href="#metodo">Método</a>
-    </div>
-    <a href="#contacto" class="btn-shimmer text-[#1B3022] px-6 py-2.5 font-label-caps text-label-caps rounded-full active:scale-95 transition-transform shadow-sm">
-      CHARLEMOS
-    </a>
-  </div>
-</nav>
-
-<main class="pt-28 md:pt-32">
-
-  <!-- ── HERO ── -->
-  <section class="max-w-[1440px] mx-auto px-8 md:px-12 mb-0 pb-24">
-    <div class="grid grid-cols-12 gap-6 items-center">
-
-      <!-- Left copy -->
-      <div class="col-span-12 md:col-span-7">
-        <span class="reveal font-label-caps text-label-caps text-secondary mb-6 block uppercase tracking-widest">
-          Estrategia &amp; Sistemas
-        </span>
-        <h1 class="reveal reveal-delay-1 font-h1 text-[clamp(36px,5vw,64px)] leading-[1.05] tracking-[-0.03em] text-primary-container mb-8 font-[Newsreader]">
-          Los negocios no fallan por falta de oportunidades, fallan por
-          <span class="italic relative">
-            falta de claridad.
-            <span class="absolute bottom-0 left-0 w-full h-[5px] bg-[#D4F953] rounded-full" style="bottom:-4px"></span>
-          </span>
-        </h1>
-        <p class="reveal reveal-delay-2 font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
-          Convertimos la complejidad en números que sí sirven para decidir.<br>
-          Para negocios que construyen con visión de largo plazo.
-        </p>
-
-        <!-- Stats row -->
-        <div class="reveal reveal-delay-3 flex gap-10 mb-10 border-t border-primary/8 pt-8">
-          <div>
-            <p class="stat-num text-primary-container" data-target="30">0<span>%</span></p>
-            <p class="font-label-caps text-label-caps text-on-surface-variant mt-1">Reducción promedio<br>de costos operativos</p>
+          <!-- Header -->
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+            <div>
+              <p style="font-family:Manrope;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#c6f33e;margin-bottom:0.5rem;">Inteligencia Financiera</p>
+              <h3 style="font-family:Newsreader;font-size:clamp(20px,2.5vw,28px);font-weight:500;color:#fff;line-height:1.25;margin:0;">
+                Modelos que revelan el valor real de su empresa.
+              </h3>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem;background:rgba(198,243,62,0.08);border:1px solid rgba(198,243,62,0.22);border-radius:100px;padding:0.4rem 1rem;flex-shrink:0;">
+              <span style="width:7px;height:7px;border-radius:50%;background:#c6f33e;animation:liveBlip 2s ease-in-out infinite;display:block;flex-shrink:0;"></span>
+              <span style="font-family:Manrope;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#c6f33e;">Dashboards en tiempo real</span>
+            </div>
           </div>
-          <div class="w-px bg-primary/8 self-stretch"></div>
-          <div>
-            <p class="stat-num text-primary-container" data-target="45">0<span> min</span></p>
-            <p class="font-label-caps text-label-caps text-on-surface-variant mt-1">Diagnóstico inicial<br>sin costo</p>
+
+          <!-- KPI strip -->
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;">
+            <div class="kpi-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1rem 1.25rem;">
+              <p style="font-family:Manrope;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.35);margin:0 0 0.3rem;">Ingresos</p>
+              <p style="font-family:Newsreader;font-size:26px;font-weight:500;color:#fff;line-height:1;margin:0;">$89.2M</p>
+              <p style="font-family:Manrope;font-size:11px;font-weight:700;color:#c6f33e;margin:0.3rem 0 0;">↑ 22.1%</p>
+            </div>
+            <div class="kpi-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1rem 1.25rem;">
+              <p style="font-family:Manrope;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.35);margin:0 0 0.3rem;">EBITDA</p>
+              <p style="font-family:Newsreader;font-size:26px;font-weight:500;color:#fff;line-height:1;margin:0;">$24.7M</p>
+              <p style="font-family:Manrope;font-size:11px;font-weight:700;color:#c6f33e;margin:0.3rem 0 0;">↑ 18.3%</p>
+            </div>
+            <div class="kpi-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1rem 1.25rem;">
+              <p style="font-family:Manrope;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.35);margin:0 0 0.3rem;">Flujo de Caja</p>
+              <p style="font-family:Newsreader;font-size:26px;font-weight:500;color:#fff;line-height:1;margin:0;">$8.3M</p>
+              <p style="font-family:Manrope;font-size:11px;font-weight:700;color:#80A9DA;margin:0.3rem 0 0;">↑ 11.8%</p>
+            </div>
+            <div class="kpi-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1rem 1.25rem;">
+              <p style="font-family:Manrope;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.35);margin:0 0 0.3rem;">ROI</p>
+              <p style="font-family:Newsreader;font-size:26px;font-weight:500;color:#fff;line-height:1;margin:0;">34.2%</p>
+              <p style="font-family:Manrope;font-size:11px;font-weight:700;color:#c6f33e;margin:0.3rem 0 0;">↑ 6.1 pts</p>
+            </div>
           </div>
-          <div class="w-px bg-primary/8 self-stretch hidden md:block"></div>
-          <div class="hidden md:block">
-            <p class="stat-num text-primary-container" data-target="12">0<span>+</span></p>
-            <p class="font-label-caps text-label-caps text-on-surface-variant mt-1">Empresas transformadas<br>en los últimos 3 años</p>
+
+          <!-- SVG Chart -->
+          <div style="position:relative;padding-left:2px;">
+            <svg viewBox="0 0 880 210" xmlns="http://www.w3.org/2000/svg"
+                 style="width:100%;height:auto;display:block;overflow:visible;" role="img" aria-label="Gráfica de ingresos, EBITDA y flujo de caja anual">
+              <defs>
+                <linearGradient id="gradRevenue" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#c6f33e" stop-opacity="0.28"/>
+                  <stop offset="85%" stop-color="#c6f33e" stop-opacity="0.03"/>
+                </linearGradient>
+                <linearGradient id="gradEBITDA" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#80A9DA" stop-opacity="0.22"/>
+                  <stop offset="85%" stop-color="#80A9DA" stop-opacity="0.02"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Horizontal grid lines -->
+              <line x1="0" y1="32"  x2="880" y2="32"  stroke="rgba(255,255,255,0.055)" stroke-width="1"/>
+              <line x1="0" y1="72"  x2="880" y2="72"  stroke="rgba(255,255,255,0.055)" stroke-width="1"/>
+              <line x1="0" y1="112" x2="880" y2="112" stroke="rgba(255,255,255,0.055)" stroke-width="1"/>
+              <line x1="0" y1="152" x2="880" y2="152" stroke="rgba(255,255,255,0.055)" stroke-width="1"/>
+
+              <!-- Y-axis labels -->
+              <text x="-6" y="36"  text-anchor="end" fill="rgba(255,255,255,0.22)" font-family="Manrope" font-size="9" font-weight="600">100M</text>
+              <text x="-6" y="76"  text-anchor="end" fill="rgba(255,255,255,0.22)" font-family="Manrope" font-size="9" font-weight="600">75M</text>
+              <text x="-6" y="116" text-anchor="end" fill="rgba(255,255,255,0.22)" font-family="Manrope" font-size="9" font-weight="600">50M</text>
+              <text x="-6" y="156" text-anchor="end" fill="rgba(255,255,255,0.22)" font-family="Manrope" font-size="9" font-weight="600">25M</text>
+
+              <!-- Area fills (appear after lines draw) -->
+              <!-- EBITDA area (back) -->
+              <path class="chart-area"
+                    d="M0,148 C26,148 52,144 80,144 C106,144 132,140 160,140 C186,140 212,134 240,134 C266,134 292,128 320,128 C346,128 372,120 400,120 C426,120 452,114 480,114 C506,114 532,107 560,107 C586,107 612,100 640,100 C666,100 692,93 720,93 C746,93 772,85 800,85 C826,85 854,77 880,77 L880,170 L0,170 Z"
+                    fill="url(#gradEBITDA)"/>
+              <!-- Revenue area (front) -->
+              <path class="chart-area"
+                    d="M0,130 C26,130 52,118 80,118 C106,118 132,107 160,107 C186,107 212,97 240,97 C266,97 292,83 320,83 C346,83 372,71 400,71 C426,71 452,61 480,61 C506,61 532,50 560,50 C586,50 612,41 640,41 C666,41 692,29 720,29 C746,29 772,19 800,19 C826,19 854,14 880,14 L880,170 L0,170 Z"
+                    fill="url(#gradRevenue)"/>
+
+              <!-- Cash flow line (dashed, behind) -->
+              <path class="chart-line-cash"
+                    d="M0,155 C26,155 52,145 80,148 C106,151 132,141 160,142 C186,143 212,136 240,137 C266,138 292,132 320,133 C346,134 372,128 400,128 C426,128 452,123 480,122 C506,121 532,116 560,116 C586,116 612,110 640,110 C666,110 692,104 720,104 C746,104 772,97 800,97 C826,97 854,89 880,89"
+                    fill="none" stroke="rgba(128,169,218,0.45)" stroke-width="1.5" stroke-dasharray="5 3"/>
+
+              <!-- EBITDA line -->
+              <path class="chart-line-ebitda"
+                    d="M0,148 C26,148 52,144 80,144 C106,144 132,140 160,140 C186,140 212,134 240,134 C266,134 292,128 320,128 C346,128 372,120 400,120 C426,120 452,114 480,114 C506,114 532,107 560,107 C586,107 612,100 640,100 C666,100 692,93 720,93 C746,93 772,85 800,85 C826,85 854,77 880,77"
+                    fill="none" stroke="rgba(128,169,218,0.75)" stroke-width="1.8"/>
+
+              <!-- Revenue line (main — animated) -->
+              <path class="chart-line-revenue"
+                    d="M0,130 C26,130 52,118 80,118 C106,118 132,107 160,107 C186,107 212,97 240,97 C266,97 292,83 320,83 C346,83 372,71 400,71 C426,71 452,61 480,61 C506,61 532,50 560,50 C586,50 612,41 640,41 C666,41 692,29 720,29 C746,29 772,19 800,19 C826,19 854,14 880,14"
+                    fill="none" stroke="#c6f33e" stroke-width="2.5" stroke-linecap="round"/>
+
+              <!-- Revenue dots -->
+              <circle class="chart-dot" cx="0"   cy="130" r="3.5" fill="#c6f33e" style="animation-delay:2.1s"/>
+              <circle class="chart-dot" cx="80"  cy="118" r="3.5" fill="#c6f33e" style="animation-delay:2.25s"/>
+              <circle class="chart-dot" cx="160" cy="107" r="3.5" fill="#c6f33e" style="animation-delay:2.4s"/>
+              <circle class="chart-dot" cx="240" cy="97"  r="3.5" fill="#c6f33e" style="animation-delay:2.55s"/>
+              <circle class="chart-dot" cx="320" cy="83"  r="3.5" fill="#c6f33e" style="animation-delay:2.7s"/>
+              <circle class="chart-dot" cx="400" cy="71"  r="3.5" fill="#c6f33e" style="animation-delay:2.85s"/>
+              <circle class="chart-dot" cx="480" cy="61"  r="3.5" fill="#c6f33e" style="animation-delay:3.0s"/>
+              <circle class="chart-dot" cx="560" cy="50"  r="3.5" fill="#c6f33e" style="animation-delay:3.15s"/>
+              <circle class="chart-dot" cx="640" cy="41"  r="3.5" fill="#c6f33e" style="animation-delay:3.3s"/>
+              <circle class="chart-dot" cx="720" cy="29"  r="3.5" fill="#c6f33e" style="animation-delay:3.45s"/>
+              <circle class="chart-dot" cx="800" cy="19"  r="3.5" fill="#c6f33e" style="animation-delay:3.6s"/>
+
+              <!-- Last point callout -->
+              <circle cx="880" cy="14" r="5"  fill="#c6f33e" style="animation:dotPop 0.4s ease 3.75s both"/>
+              <circle cx="880" cy="14" r="11" fill="#c6f33e" fill-opacity="0.18" style="animation:dotPop 0.4s ease 3.75s both"/>
+              <rect x="852" y="-2" width="60" height="18" rx="4" fill="#c6f33e" style="animation:fadeArea 0.3s ease 3.9s both;opacity:0"/>
+              <text x="882" y="10" text-anchor="middle" fill="#1B3022" font-family="Manrope" font-size="9" font-weight="700"
+                    style="animation:fadeArea 0.3s ease 3.9s both;opacity:0">+22% YoY</text>
+
+              <!-- X-axis -->
+              <line x1="0" y1="170" x2="880" y2="170" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+              <text x="0"   y="184" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-family="Manrope" font-size="9" font-weight="600">ENE</text>
+              <text x="80"  y="184" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-family="Manrope" font-size="9" font-weight="600">FEB</text>
+              <text x="160" y="184" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-family="Manrope" font-size="9" font-weight="600">MAR</text>
+              <text x="240" y="184" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-family="Manrope" font-size="9" font-weight="600">ABR</text>
+              <text x="320" y="184" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-family="Manrope" font-size="9" font-weight="600">MAY</text>
+              <text x="400" y="184" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-family="Manrope" font-size="9" font-weight="600">JUN</text>
+              <text x="480" y="184" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-family="Manrope" font-size="9" font-weight="600">JUL</text>
+              <text x="560" y="184" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-family="Manrope" font-size="9" font-weight="600">AGO</text>
+              <text x="640" y="184" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-family="Manrope" font-size="9" font-weight="600">SEP</text>
+              <text x="720" y="184" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-family="Manrope" font-size="9" font-weight="600">OCT</text>
+              <text x="800" y="184" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-family="Manrope" font-size="9" font-weight="600">NOV</text>
+              <text x="880" y="184" text-anchor="middle" fill="rgba(255,255,255,0.5)"  font-family="Manrope" font-size="9" font-weight="700">DIC</text>
+
+              <!-- Legend -->
+              <circle cx="4"   cy="200" r="4"  fill="#c6f33e"/>
+              <text   x="12"  y="204" fill="rgba(255,255,255,0.45)" font-family="Manrope" font-size="9" font-weight="600">Ingresos</text>
+              <circle cx="72"  cy="200" r="4"  fill="#80A9DA"/>
+              <text   x="80"  y="204" fill="rgba(255,255,255,0.45)" font-family="Manrope" font-size="9" font-weight="600">EBITDA</text>
+              <line   x1="148" y1="200" x2="164" y2="200" stroke="rgba(128,169,218,0.55)" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <text   x="168" y="204" fill="rgba(255,255,255,0.45)" font-family="Manrope" font-size="9" font-weight="600">Flujo de Caja</text>
+            </svg>
           </div>
-        </div>
 
-        <div class="reveal reveal-delay-4 flex gap-4 flex-wrap">
-          <a href="#contacto" class="group bg-secondary-container text-primary-container font-label-caps text-label-caps px-8 py-4 rounded-full flex items-center gap-2 hover:shadow-lg transition-all">
-            MÁS INFORMACIÓN
-            <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Right image + floating card -->
-      <div class="col-span-12 md:col-span-5 relative reveal reveal-delay-2">
-        <div class="aspect-[4/5] bg-surface-container-high rounded-2xl overflow-hidden shadow-2xl">
-          <img class="w-full h-full object-cover" style="filter: grayscale(0.15) contrast(1.08);"
-               src="./index_files/unnamed.png" alt="Oficina ejecutiva moderna"
-               fetchpriority="high" loading="eager" decoding="async">
-        </div>
-
-        <!-- Floating glassmorphism card -->
-        <div class="floating absolute -bottom-8 -left-8 glass-card p-6 rounded-xl shadow-2xl max-w-[260px]">
-          <div class="accent-bar w-12 mb-3"></div>
-          <p class="font-data-mono text-data-mono text-secondary mb-1">PROYECCIÓN FINANCIERA</p>
-          <p class="font-[Newsreader] text-[20px] leading-[1.3] font-[500] text-primary-container">
-            Escenarios complejos en decisiones accionables.
-          </p>
-        </div>
-
-        <!-- Floating badge top-right -->
-        <div class="absolute -top-4 -right-4 bg-[#D4F953] text-[#1B3022] px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
-          <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1;" aria-hidden="true">verified</span>
-          <span class="font-label-caps text-[11px]">LEGACY EVOLVED</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ── MARQUEE TICKER ── -->
-  <div class="border-y border-primary/8 bg-[#fdf9ed] py-4 overflow-hidden my-0">
-    <div class="marquee-wrapper">
-      <div class="marquee-track">
-        <!-- Duplicated for seamless loop -->
-        <div class="flex items-center gap-0 shrink-0">
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">GOBIERNO CORPORATIVO</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">EFICIENCIA DE CAPITAL</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">PROTOCOLO FAMILIAR</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">INTELIGENCIA FINANCIERA</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">AI &amp; AUTOMATION</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">MÉRIDA · CDMX</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">ESTRATEGIA &amp; SISTEMAS</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">LEGACY EVOLVED</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-        </div>
-        <!-- Duplicate -->
-        <div class="flex items-center gap-0 shrink-0" aria-hidden="true">
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">GOBIERNO CORPORATIVO</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">EFICIENCIA DE CAPITAL</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">PROTOCOLO FAMILIAR</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">INTELIGENCIA FINANCIERA</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">AI &amp; AUTOMATION</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">MÉRIDA · CDMX</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">ESTRATEGIA &amp; SISTEMAS</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-          <span class="font-label-caps text-label-caps text-[#1B3022]/30 px-8">LEGACY EVOLVED</span>
-          <span class="text-[#D4F953] text-lg font-bold">✦</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── EXPERTISE (dark mesh) ── -->
-  <section id="experiencia" class="mesh-section py-32 text-white">
-    <div class="spotlight" id="expertiseSpotlight"></div>
-    <div class="mesh-blob blob-green" style="width:28vw;height:28vw;top:-8%;left:-4%;animation-duration:12s;"></div>
-    <div class="mesh-blob blob-blue"  style="width:32vw;height:28vw;top:20%;right:-8%;animation-duration:16s;animation-delay:-5s;"></div>
-    <div class="mesh-blob blob-green" style="width:22vw;height:32vw;bottom:-4%;right:12%;animation-duration:19s;animation-delay:-3s;"></div>
-    <div class="mesh-blob blob-blue"  style="width:28vw;height:26vw;bottom:12%;left:6%;animation-duration:17s;animation-delay:-8s;"></div>
-    <div class="mesh-grain"></div>
-
-    <div class="mesh-content max-w-[1440px] mx-auto px-8 md:px-12">
-      <div class="mb-20 reveal">
-        <span class="font-label-caps text-label-caps text-[#c6f33e] mb-4 block uppercase tracking-widest">Experiencia</span>
-        <h2 class="font-[Newsreader] text-[clamp(28px,4vw,48px)] leading-[1.15] tracking-[-0.02em] text-white max-w-2xl">
-          Legacy Evolved: Evolución estratégica para empresas con historia.
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-white/8 pt-16">
-        <div class="expertise-card reveal reveal-delay-1">
-          <div class="w-10 h-10 rounded-lg bg-[#c6f33e]/10 flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-[#c6f33e] text-2xl" aria-hidden="true">account_balance</span>
-          </div>
-          <h3 class="font-[Newsreader] text-[22px] font-[500] mb-3 text-white">Gobierno Corporativo</h3>
-          <p class="font-body-md text-[15px] text-[#a88f6d] leading-relaxed">Ordenamos la toma de decisiones, los roles y los procesos clave sin borrar la esencia del negocio.</p>
-        </div>
-
-        <div class="expertise-card reveal reveal-delay-2">
-          <div class="w-10 h-10 rounded-lg bg-[#c6f33e]/10 flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-[#c6f33e] text-2xl" aria-hidden="true">trending_up</span>
-          </div>
-          <h3 class="font-[Newsreader] text-[22px] font-[500] mb-3 text-white">Eficiencia de Capital</h3>
-          <p class="font-body-md text-[15px] text-[#a88f6d] leading-relaxed">Optimización de flujos de caja y estructuras de costos para maximizar el valor del accionista.</p>
-        </div>
-
-        <div class="expertise-card reveal reveal-delay-3">
-          <div class="w-10 h-10 rounded-lg bg-[#c6f33e]/10 flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-[#c6f33e] text-2xl" aria-hidden="true">diversity_3</span>
-          </div>
-          <h3 class="font-[Newsreader] text-[22px] font-[500] mb-3 text-white">Protocolo Familiar</h3>
-          <p class="font-body-md text-[15px] text-[#a88f6d] leading-relaxed">Acuerdos claros para alinear familia, propiedad y empresa alrededor de una visión común.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── BENTO GRID (Enfoque) ── -->
-  <section id="enfoque" class="py-32 max-w-[1440px] mx-auto px-8 md:px-12">
-    <div class="flex justify-between items-end mb-16 reveal">
-      <div class="max-w-xl">
-        <span class="font-label-caps text-label-caps text-secondary mb-4 block uppercase tracking-widest">Enfoque</span>
-        <h2 class="font-[Newsreader] text-[clamp(28px,4vw,48px)] leading-[1.15] tracking-[-0.02em]">
-          Modelos de negocio listos para el futuro digital.
-        </h2>
-      </div>
-    </div>
-
-    <div class="bento-grid" style="height: auto; min-height: 560px;">
-      <!-- Card 1: AI Audit (large) -->
-      <div class="bento-card col-span-12 md:col-span-8 bg-gradient-to-br from-[#80A9DA]/25 to-[#80A9DA]/10 border border-primary/5 p-10 flex flex-col justify-between rounded-xl reveal" style="min-height: 280px;">
-        <div>
-          <div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-primary-container text-2xl" aria-hidden="true">auto_awesome</span>
-          </div>
-          <h3 class="font-[Newsreader] text-[26px] font-[500] mb-3">AI &amp; Automation Audit</h3>
-          <p class="font-body-md text-on-surface-variant max-w-md text-[15px]">No implementamos tecnología por moda. Auditamos sus procesos actuales y automatizamos donde el ROI es inmediato.</p>
-        </div>
-        <div class="flex justify-between items-end mt-6">
-          <div class="flex gap-2 flex-wrap">
-            <span class="px-3 py-1.5 bg-white border border-primary/8 rounded-full font-data-mono text-[11px] shadow-sm">REDUCCIÓN COSTOS 30%</span>
-            <span class="px-3 py-1.5 bg-white border border-primary/8 rounded-full font-data-mono text-[11px] shadow-sm">LISTO PARA ESCALAR</span>
-          </div>
-          <span class="material-symbols-outlined text-3xl text-on-surface-variant" aria-hidden="true">arrow_right_alt</span>
-        </div>
-      </div>
-
-      <!-- Card 2: Business Review (small) -->
-      <div class="bento-card col-span-12 md:col-span-4 bg-gradient-to-br from-surface-container to-surface-container-high border border-primary/5 p-10 flex flex-col justify-center items-center text-center rounded-xl reveal reveal-delay-1" style="min-height: 280px;">
-        <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-5">
-          <span class="material-symbols-outlined text-secondary text-4xl" aria-hidden="true">insights</span>
-        </div>
-        <h3 class="font-[Newsreader] text-[22px] font-[500] mb-2">Business Review</h3>
-        <p class="font-body-md text-on-surface-variant text-[14px]">Diagnóstico de 360 grados de su modelo operativo actual.</p>
-      </div>
-
-      <!-- Card 3: Inteligencia Financiera -->
-      <div class="bento-card col-span-12 md:col-span-4 bg-primary-container text-white p-10 flex flex-col justify-between rounded-xl reveal reveal-delay-1" style="min-height: 240px;">
-        <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center mb-auto">
-          <span class="material-symbols-outlined text-[#c6f33e] text-2xl" aria-hidden="true">query_stats</span>
-        </div>
-        <h3 class="font-[Newsreader] text-[22px] font-[500] mt-6 text-white leading-tight">Inteligencia Financiera</h3>
-        <p class="text-[#a88f6d] text-[14px] mt-2 font-body-md">Modelos que revelan el valor real de su empresa.</p>
-      </div>
-
-      <!-- Card 4: Dashboard image -->
-      <div class="bento-card col-span-12 md:col-span-8 overflow-hidden relative rounded-xl reveal reveal-delay-2" style="min-height: 240px;">
-        <img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-             src="./index_files/unnamed(1).png" alt="Dashboard de inteligencia financiera en tiempo real"
-             loading="lazy" decoding="async">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-8">
-          <p class="font-label-caps text-label-caps text-[#c6f33e] mb-1">INSIGHTS EN TIEMPO REAL</p>
-          <h4 class="text-white font-[Newsreader] text-[22px] font-[500]">Generación de Dashboards Integrales</h4>
         </div>
       </div>
     </div>
@@ -590,130 +201,3 @@ tailwind.config = {
                loading="lazy" decoding="async">
         </div>
       </div>
-
-    </div>
-  </section>
-
-  <!-- ── CTA FINAL ── -->
-  <section id="contacto" class="py-32 px-8 md:px-12">
-    <div class="max-w-[1440px] mx-auto cta-bg rounded-2xl p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-12 reveal">
-      <div class="max-w-xl relative z-10">
-        <span class="font-label-caps text-label-caps text-[#c6f33e] mb-4 block uppercase tracking-widest">Siguiente paso</span>
-        <h2 class="font-[Newsreader] text-[clamp(32px,4vw,56px)] leading-[1.05] tracking-[-0.02em] text-white mb-6">
-          ¿Listo para traer claridad a su estructura empresarial?
-        </h2>
-        <p class="font-body-lg text-body-lg text-[#a88f6d]">
-          Sesión de diagnóstico inicial de 45 minutos sin costo.<br>
-          Exclusivo para directivos y dueños de negocio.
-        </p>
-      </div>
-      <div class="flex flex-col gap-4 shrink-0 relative z-10 w-full md:w-auto">
-        <a href="https://calendar.app.google/FghwW2gDcwsY71D2A" target="_blank" rel="noopener noreferrer"
-           class="btn-shimmer text-[#1B3022] font-label-caps text-label-caps px-10 py-4 rounded-full active:scale-95 transition-transform text-center shadow-lg">
-          AGENDAR SESIÓN
-        </a>
-        <a href="mailto:contacto@quantta.mx"
-           class="border border-white/20 text-white font-label-caps text-label-caps px-10 py-4 rounded-full hover:bg-white/10 transition-all text-center">
-          CONTACTO DIRECTO
-        </a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ── FOOTER ── -->
-<footer class="w-full py-16 footer-bg border-t border-[#1B3022]/10">
-  <div class="flex flex-col items-center text-center gap-4 max-w-[1440px] mx-auto px-12">
-    <img src="./index_files/slogan-cafe.svg" alt="Quantta" class="h-14">
-    <p class="font-serif text-xs tracking-wide text-[#1B3022]/50 max-w-xs">
-      Consultoría estratégica para empresas que buscan claridad operativa, financiera y organizacional.
-    </p>
-    <a href="https://project-2lq5x.vercel.app/legal.html"
-       class="font-serif text-xs tracking-wide text-[#1B3022]/35 hover:text-[#1B3022] transition-colors underline">
-      Aviso de Privacidad · Términos de Servicio · Cookies
-    </a>
-    <span class="font-serif text-xs tracking-wide text-[#1B3022]/35">
-      © 2026 Quantta Strategic Consulting. Todos los derechos reservados.
-    </span>
-  </div>
-</footer>
-
-<script>
-  // ── SCROLL REVEAL ──
-  const revealEls = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('is-visible');
-        revealObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
-
-  revealEls.forEach(el => revealObserver.observe(el));
-
-  // ── NUMBER COUNTERS ──
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.target, 10);
-    const suffix = el.querySelector('span')?.textContent || '';
-    const duration = 1400;
-    const start = performance.now();
-
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      // ease-out quart
-      const eased = 1 - Math.pow(1 - progress, 4);
-      const current = Math.round(eased * target);
-      el.firstChild.textContent = current;
-      if (progress < 1) requestAnimationFrame(update);
-    }
-    requestAnimationFrame(update);
-  }
-
-  const statEls = document.querySelectorAll('[data-target]');
-  const statObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target);
-        statObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  statEls.forEach(el => statObserver.observe(el));
-
-  // ── SPOTLIGHT IN DARK SECTION ──
-  const expertiseSection = document.querySelector('#experiencia');
-  const spotlight = document.getElementById('expertiseSpotlight');
-  if (expertiseSection && spotlight) {
-    expertiseSection.addEventListener('mousemove', (e) => {
-      const rect = expertiseSection.getBoundingClientRect();
-      spotlight.style.left = (e.clientX - rect.left) + 'px';
-      spotlight.style.top  = (e.clientY - rect.top)  + 'px';
-    });
-  }
-
-  // ── ACTIVE NAV ──
-  const sections = ['experiencia', 'enfoque', 'metodo'];
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  function onScroll() {
-    let current = '';
-    sections.forEach(id => {
-      const el = document.getElementById(id);
-      if (el && window.scrollY >= el.offsetTop - 140) current = id;
-    });
-    navLinks.forEach(link => {
-      const active = link.dataset.section === current;
-      link.classList.toggle('text-[#1B3022]', active);
-      link.classList.toggle('text-[#1B3022]/50', !active);
-      link.classList.toggle('border-[#D4F953]', active);
-      link.classList.toggle('border-transparent', !active);
-    });
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-</script>
-</body>
-</html>

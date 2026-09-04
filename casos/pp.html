@@ -89,34 +89,46 @@ img { max-width: 100%; display: block; }
   max-width: 600px; margin: 0;
 }
 
-/* ── HERO (light, architectural) ── */
-.hero-pp {
-  padding: clamp(60px,9vw,120px) 0 clamp(48px,7vw,96px);
-  background: var(--ground);
-  border-bottom: 1px solid var(--border);
+/* ── HERO (dark mesh, same as Flux) ── */
+.hero {
+  padding: clamp(96px,14vw,160px) 0 clamp(64px,8vw,100px);
+  margin-top: 60px;
 }
-.hero-pp .container {
-  display: flex; flex-direction: column; align-items: flex-start;
+.hero .container { position: relative; z-index: 10; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--lime-alt);
 }
-.hero-pp-logo {
-  height: clamp(48px,7vw,80px); width: auto;
-  margin: 0 0 clamp(32px,5vw,56px);
-  filter: var(--logo-filter, none);
+.eyebrow::before {
+  content: ""; width: 22px; height: 2px;
+  background: var(--lime-alt); border-radius: 2px; flex-shrink: 0;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .hero-pp-logo { filter: invert(1) brightness(0.9); }
+.hero-logo {
+  display: block;
+  height: clamp(56px,9vw,100px);
+  width: auto;
+  margin: 24px 0 0;
+  filter: invert(1) brightness(0.92);
 }
-:root[data-theme="dark"] .hero-pp-logo { filter: invert(1) brightness(0.9); }
-.hero-pp-tags {
-  display: flex; gap: 8px; flex-wrap: wrap;
-  margin: 20px 0 0;
+.hero-lede {
+  font-size: clamp(17px,2vw,21px);
+  color: rgba(255,255,255,0.55);
+  max-width: 58ch;
+  margin: 1em 0 0;
+  line-height: 1.55;
 }
-.hero-pp-tag {
-  font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 5px 12px; border-radius: 999px;
-  border: 1px solid var(--border);
-  color: var(--ink-mid);
+.hero-lede strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.chip {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 999px;
+  padding: 6px 14px;
 }
+.chip strong { color: rgba(255,255,255,0.85); font-weight: 700; }
 
 /* ── RETO (dark) ── */
 .reto-section {
@@ -377,18 +389,20 @@ footer {
 </nav>
 
 <!-- HERO -->
-<section class="hero-pp">
-  <div class="container">
-    <p class="sec-label">Caso de estudio · Hospitalidad · Ciudad de México</p>
-    <img class="hero-pp-logo" src="/index_files/pp-logo.png" alt="Proyectos Públicos">
-    <p class="statement">Una operación tan particular que necesitaba su propio sistema.</p>
-    <p class="sub">Workplaces, hospedaje y restaurantes — cada vertical con su flujo propio, todo integrado en una sola plataforma hecha a la medida.</p>
-    <div class="hero-pp-tags">
-      <span class="hero-pp-tag">Workplaces</span>
-      <span class="hero-pp-tag">Hospedaje</span>
-      <span class="hero-pp-tag">Restaurantes</span>
-      <span class="hero-pp-tag">Gestión de eventos</span>
-      <span class="hero-pp-tag">Mobile first</span>
+<section class="hero mesh">
+  <div class="mesh-blob blob-lime" style="width:30vw;height:30vw;top:-6%;left:-3%;animation-duration:13s;"></div>
+  <div class="mesh-blob blob-blue" style="width:26vw;height:26vw;top:20%;right:-4%;animation-duration:18s;animation-delay:-6s;"></div>
+  <div class="mesh-blob blob-lime" style="width:18vw;height:22vw;bottom:-4%;right:16%;animation-duration:21s;animation-delay:-4s;"></div>
+  <div class="mesh-grain"></div>
+  <div class="container mesh-content">
+    <span class="eyebrow">Caso de éxito · Hospitalidad · CDMX</span>
+    <img class="hero-logo" src="/index_files/pp-logo.png" alt="Proyectos Públicos">
+    <p class="hero-lede">Una operación tan particular que necesitaba su propio sistema — <strong>workplaces, hospedaje y restaurantes</strong> integrados en una sola plataforma hecha a la medida.</p>
+    <div class="chips">
+      <span class="chip"><strong>Mobile first</strong> · operación desde el celular</span>
+      <span class="chip"><strong>3 verticales</strong> · un solo dashboard</span>
+      <span class="chip"><strong>IA</strong> · procesamiento automático por área</span>
+      <span class="chip"><strong>A la medida</strong> · sistemas propios + off-the-shelf</span>
     </div>
   </div>
 </section>

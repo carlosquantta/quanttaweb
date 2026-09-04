@@ -21,6 +21,9 @@
     "url": "https://github.com/carlosquantta/quanttaweb/issues"
   },
   "homepage": "https://github.com/carlosquantta/quanttaweb#readme",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "devDependencies": {
     "tailwindcss": "^3.4.19"
   },

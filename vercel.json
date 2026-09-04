@@ -3,7 +3,6 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": "astro",
-  "nodeVersion": "22.x",
   "redirects": [
     { "source": "/casos/flux.html", "destination": "/casos/flux", "permanent": true },
     { "source": "/casos/pp.html",   "destination": "/casos/pp",   "permanent": true },

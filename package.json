@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/carlosquantta/quanttaweb#readme",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=18.20.8"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.19"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^6.0.2",
-    "astro": "^7.3.1"
+    "@astrojs/tailwind": "^5.1.5",
+    "astro": "^5.18.2"
   }
 }

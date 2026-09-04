@@ -294,33 +294,18 @@ body {
   border-top: 1px solid var(--border-faint);
 }
 .diff-list {
-  margin-top: 8px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 .diff-item {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: clamp(24px, 4vw, 64px);
-  align-items: baseline;
-  padding: 32px 0;
+  padding: 16px 0;
   border-top: 1px solid var(--border);
+  font-size: 15px; line-height: 1.6; color: var(--ink-mid);
 }
 .diff-item:last-child { border-bottom: 1px solid var(--border); }
-.diff-label {
-  font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
-  color: var(--lime-alt);
-  padding-top: 4px;
-}
-.diff-body h4 {
-  font-family: "Newsreader", Georgia, serif;
-  font-size: clamp(20px, 2.4vw, 26px);
-  font-weight: 500; letter-spacing: -0.015em;
-  color: var(--ink);
-  margin: 0 0 10px;
-  text-wrap: balance;
-}
-.diff-body p {
-  font-size: 15px; line-height: 1.65; color: var(--ink-mid); margin: 0; max-width: 52ch;
-}
+.diff-item strong { color: var(--ink); font-weight: 600; }
 
 /* ── STATS ── */
 .stats-section {
@@ -467,14 +452,8 @@ footer {
   color: var(--lime-alt);
   margin: 0 0 10px;
 }
-.outcome-item h4 {
-  font-family: "Newsreader", Georgia, serif;
-  font-size: 18px; font-weight: 500; letter-spacing: -0.01em;
-  color: var(--ink);
-  margin: 0 0 10px; text-wrap: balance;
-}
-.outcome-item p {
-  font-size: 14px; line-height: 1.65; color: var(--ink-mid); margin: 0;
+.outcome-desc {
+  font-size: 14px; line-height: 1.6; color: var(--ink-mid); margin: 0;
 }
 .next-layer {
   background: var(--lime-wash);
@@ -697,7 +676,7 @@ footer {
         <div class="contrast-card despues">
           <span class="contrast-badge">
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Con Flux
+            Con Quantta
           </span>
           <div class="contrast-items">
             <div class="contrast-item">
@@ -727,18 +706,15 @@ footer {
     <div class="outcome-grid">
       <div class="outcome-item">
         <p class="outcome-label">El equipo hace más</p>
-        <h4>Menos proceso manual, más estrategia y revisión</h4>
-        <p>El equipo pasó de operar flujos rutinarios a supervisarlos — con más espacio para lo que sí requiere criterio.</p>
+        <p class="outcome-desc">Menos proceso manual, más estrategia y revisión, con espacio para lo que sí requiere criterio.</p>
       </div>
       <div class="outcome-item">
         <p class="outcome-label">Mejor información</p>
-        <h4>Del dato al criterio</h4>
-        <p>Visibilidad consolidada y oportuna — con el contexto que la dirección necesita para actuar, no para interpretar.</p>
+        <p class="outcome-desc">Visibilidad consolidada y oportuna — el contexto que la dirección necesita para actuar, no para interpretar.</p>
       </div>
       <div class="outcome-item">
         <p class="outcome-label">Automatización acumulativa</p>
-        <h4>Cada proceso estable, un candidato a automatizar</h4>
-        <p>Conforme los flujos se estabilizan, se automatizan. El equipo interviene en excepciones — no en rutinas.</p>
+        <p class="outcome-desc">Conforme los flujos se estabilizan, se automatizan. El equipo interviene en excepciones, no en rutinas.</p>
       </div>
     </div>
     <div class="next-layer">
@@ -847,31 +823,9 @@ footer {
   <div class="container">
     <p class="sec-label">Lo que lo distingue</p>
     <div class="diff-list">
-
-      <div class="diff-item">
-        <span class="diff-label">Cero recaptura</span>
-        <div class="diff-body">
-          <h4>La factura entra una vez</h4>
-          <p>Del CFDI a la póliza contable sin volver a teclear nada.</p>
-        </div>
-      </div>
-
-      <div class="diff-item">
-        <span class="diff-label">Clasificación asistida</span>
-        <div class="diff-body">
-          <h4>Aprende de la historia</h4>
-          <p>Flux sugiere partida y cuenta por proveedor. El equipo confirma; no adivina.</p>
-        </div>
-      </div>
-
-      <div class="diff-item">
-        <span class="diff-label">Disciplina financiera</span>
-        <div class="diff-body">
-          <h4>El presupuesto manda</h4>
-          <p>Ningún gasto avanza sin pasar por su partida — y las excepciones quedan firmadas.</p>
-        </div>
-      </div>
-
+      <div class="diff-item"><strong>Cero recaptura —</strong> la factura entra una vez; del CFDI a la póliza contable sin volver a teclear nada.</div>
+      <div class="diff-item"><strong>Clasificación asistida —</strong> Flux sugiere partida y cuenta por proveedor. El equipo confirma; no adivina.</div>
+      <div class="diff-item"><strong>Disciplina financiera —</strong> ningún gasto avanza sin pasar por su partida, y las excepciones quedan firmadas.</div>
     </div>
   </div>
 </section>

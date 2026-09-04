@@ -1,0 +1,665 @@
+---
+import CasoLayout from '../../layouts/CasoLayout.astro';
+---
+
+<CasoLayout title="Proyectos Públicos — Caso de éxito">
+  <Fragment slot="head">
+    <style>
+/* ── TOKENS ── */
+:root {
+  --ground: #fdf9ed;
+  --dark: #1c1005;
+  --ink: #1c1005;
+  --ink-mid: rgba(28,16,5,0.62);
+  --ink-faint: rgba(28,16,5,0.34);
+  --lime: #D4F953;
+  --lime-alt: #c6f33e;
+  --lime-wash: rgba(212,249,83,0.12);
+  --blue: #80A9DA;
+  --border: rgba(28,16,5,0.1);
+  --border-faint: rgba(28,16,5,0.06);
+  --surface: rgba(28,16,5,0.04);
+  --on-dark-mid: rgba(255,255,255,0.55);
+  --on-dark-faint: rgba(255,255,255,0.32);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #17120a;
+    --dark: #1c1005;
+    --ink: rgba(253,249,237,0.92);
+    --ink-mid: rgba(253,249,237,0.55);
+    --ink-faint: rgba(253,249,237,0.3);
+    --border: rgba(253,249,237,0.1);
+    --border-faint: rgba(253,249,237,0.06);
+    --surface: rgba(253,249,237,0.05);
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #17120a;
+  --dark: #1c1005;
+  --ink: rgba(253,249,237,0.92);
+  --ink-mid: rgba(253,249,237,0.55);
+  --ink-faint: rgba(253,249,237,0.3);
+  --border: rgba(253,249,237,0.1);
+  --border-faint: rgba(253,249,237,0.06);
+  --surface: rgba(253,249,237,0.05);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body { background: var(--ground); color: var(--ink); font-family: "Manrope", system-ui, sans-serif; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Manrope:wght@400;500;600;700;800&display=swap">
+
+/* ── NAV ── */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--ground);
+  border-bottom: 1px solid var(--border);
+  padding: 0 clamp(20px,4vw,48px);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px;
+}
+.nav-logo { height: 24px; width: auto; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { font-size: 13px; font-weight: 500; color: var(--ink-mid); transition: color .15s; }
+.nav-links a:hover { color: var(--ink); }
+.nav-cta {
+  font-size: 13px; font-weight: 700;
+  background: var(--lime); color: var(--dark);
+  padding: 7px 16px; border-radius: 999px;
+  transition: background .15s;
+}
+.nav-cta:hover { background: var(--lime-alt); }
+
+/* ── SHARED ── */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 clamp(20px,4vw,48px); }
+.sec-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--lime-alt); margin: 0 0 18px;
+}
+.statement {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(28px,4vw,48px); font-weight: 400; letter-spacing: -0.02em;
+  line-height: 1.15; color: var(--ink); text-wrap: balance;
+  max-width: 820px; margin: 0 0 20px;
+}
+.sub {
+  font-size: clamp(15px,1.8vw,17px); line-height: 1.65; color: var(--ink-mid);
+  max-width: 600px; margin: 0;
+}
+
+/* ── HERO (dark mesh, same as Flux) ── */
+.hero {
+  padding: clamp(96px,14vw,160px) 0 clamp(64px,8vw,100px);
+  margin-top: 60px;
+}
+.hero .container { position: relative; z-index: 10; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--lime-alt);
+}
+.eyebrow::before {
+  content: ""; width: 22px; height: 2px;
+  background: var(--lime-alt); border-radius: 2px; flex-shrink: 0;
+}
+.hero-logo {
+  display: block;
+  height: clamp(56px,9vw,100px);
+  width: auto;
+  margin: 24px 0 0;
+  filter: invert(1) brightness(0.92);
+}
+.hero-lede {
+  font-size: clamp(17px,2vw,21px);
+  color: rgba(255,255,255,0.55);
+  max-width: 58ch;
+  margin: 1em 0 0;
+  line-height: 1.55;
+}
+.hero-lede strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.chip {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+.chip strong { color: rgba(255,255,255,0.85); font-weight: 700; }
+
+/* ── RETO (dark) ── */
+.reto-section {
+  padding: clamp(60px,8vw,100px) 0;
+  background: var(--dark);
+  color: #fff;
+}
+.reto-section .sec-label { color: var(--lime-alt); }
+.reto-section .statement { color: #fff; }
+.reto-section .sub { color: var(--on-dark-mid); }
+.contrast-cards { display: flex; flex-direction: column; gap: 12px; padding-top: 38px; }
+.contrast-card { border-radius: 14px; padding: 20px 22px; display: flex; flex-direction: column; gap: 12px; }
+.contrast-card.antes { background: rgba(255,80,60,0.05); border: 1px solid rgba(255,80,60,0.14); }
+.contrast-card.despues { background: rgba(198,243,62,0.08); border: 1px solid rgba(198,243,62,0.2); }
+.contrast-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 999px; width: fit-content;
+}
+.antes .contrast-badge { background: rgba(255,80,60,0.1); color: #e07070; }
+.despues .contrast-badge { background: rgba(198,243,62,0.15); color: #c6f33e; }
+.contrast-items { display: flex; flex-direction: column; gap: 8px; }
+.contrast-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; line-height: 1.45; color: var(--on-dark-mid); }
+.ci-dot { flex-shrink: 0; margin-top: 1px; }
+
+/* ── VERTICALES (light) ── */
+.verticales-section {
+  padding: clamp(56px,8vw,96px) 0;
+  background: var(--ground);
+  border-bottom: 1px solid var(--border-faint);
+}
+.verticales-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-top: 32px;
+}
+.vertical-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(20px,2.5vw,28px);
+  display: flex; flex-direction: column; gap: 10px;
+  background: var(--surface);
+}
+.vertical-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--lime-wash);
+  border: 1px solid rgba(198,243,62,0.25);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 4px;
+}
+.vertical-name {
+  font-size: 16px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink);
+}
+.vertical-desc {
+  font-size: 13px; line-height: 1.55; color: var(--ink-mid);
+}
+.vertical-feats { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.vertical-feat {
+  font-size: 12px; color: var(--ink-faint);
+  display: flex; align-items: center; gap: 6px;
+}
+.vertical-feat::before {
+  content: ""; flex-shrink: 0;
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--lime-alt);
+}
+
+/* ── MESH (shared: hero + features) ── */
+.mesh {
+  position: relative;
+  background: var(--dark);
+  overflow: hidden;
+  z-index: 1;
+}
+.mesh-content { position: relative; z-index: 10; }
+.mesh-blob {
+  position: absolute;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  filter: blur(130px);
+  opacity: 0.28;
+  animation: meshMove infinite alternate ease-in-out;
+  pointer-events: none;
+  z-index: 2;
+}
+.blob-lime { background: #C8FF3A; }
+.blob-blue { background: #6B9ED4; }
+@keyframes meshMove {
+  0%   { transform: translate(0,0) rotate(0deg) scale(1); }
+  100% { transform: translate(24vw,16vh) rotate(75deg) scale(1.22); }
+}
+.mesh-grain {
+  position: absolute; inset: 0; z-index: 5; pointer-events: none; opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.mesh .sec-label { color: var(--lime-alt); opacity: 0.8; }
+
+/* ── FEATURES SECTION ── */
+.features-section {
+  padding: clamp(60px,8vw,100px) 0;
+}
+
+/* ── FLOW DIAGRAM ── */
+.flow-diagram {
+  display: flex; align-items: flex-start;
+  margin: 0 0 44px; overflow-x: auto; scrollbar-width: none;
+}
+.flow-step {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  flex: 1; min-width: 120px; text-align: center; padding: 0 8px;
+}
+.flow-icon-wrap {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+}
+.flow-step.accent .flow-icon-wrap {
+  background: rgba(198,243,62,0.1);
+  border-color: rgba(198,243,62,0.28);
+}
+.flow-label { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.85); }
+.flow-sub { font-size: 11px; color: rgba(255,255,255,0.32); line-height: 1.5; }
+.flow-connector {
+  flex-shrink: 0; display: flex; align-items: center;
+  padding-top: 14px; color: rgba(198,243,62,0.45);
+}
+
+/* ── PILLARS ── */
+.pillars {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 12px;
+}
+.pillar {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px; padding: clamp(20px,2.5vw,28px);
+  background: rgba(255,255,255,0.03);
+}
+.pillar-head { display: flex; align-items: center; gap: 10px; margin: 0 0 6px; }
+.pillar-head h3 {
+  font-size: 15px; font-weight: 700; letter-spacing: -0.01em;
+  color: rgba(255,255,255,0.9); margin: 0;
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime-alt); flex-shrink: 0; }
+.pillar-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.22); margin: 0 0 18px; padding-left: 18px; }
+.feat { padding: 11px 0; border-top: 1px solid rgba(255,255,255,0.07); }
+.feat:first-of-type { border-top: 0; }
+.feat p { font-size: 13.5px; color: rgba(255,255,255,0.55); line-height: 1.55; margin: 0; }
+.feat p strong { font-weight: 700; color: rgba(255,255,255,0.85); }
+
+/* ── ADVISORY ── */
+.advisory-section {
+  padding: clamp(56px,8vw,96px) 0;
+  background: var(--ground);
+  border-top: 1px solid var(--border-faint);
+}
+.outcome-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 16px; margin-top: 32px;
+}
+.outcome-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: clamp(20px,2.5vw,28px);
+}
+.outcome-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--lime-alt); margin: 0 0 10px;
+}
+.outcome-desc { font-size: 14px; line-height: 1.6; color: var(--ink-mid); margin: 0; }
+.next-layer {
+  background: var(--lime-wash);
+  border: 1px solid rgba(198,243,62,0.18);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-top: 20px;
+  font-size: 14px; line-height: 1.65; color: var(--ink-mid);
+}
+.next-layer strong { color: var(--ink); font-weight: 700; }
+
+/* ── LO QUE LO DISTINGUE ── */
+.diff-section {
+  padding: clamp(56px,8vw,96px) 0;
+  background: var(--ground);
+  border-top: 1px solid var(--border-faint);
+}
+.diff-list { margin-top: 16px; display: flex; flex-direction: column; gap: 0; }
+.diff-item {
+  padding: 16px 0; border-top: 1px solid var(--border);
+  font-size: 15px; line-height: 1.6; color: var(--ink-mid);
+}
+.diff-item:last-child { border-bottom: 1px solid var(--border); }
+.diff-item strong { color: var(--ink); font-weight: 600; }
+
+/* ── STATS ── */
+.stats-section {
+  padding: clamp(56px,8vw,96px) 0;
+  background: var(--dark);
+  color: #fff;
+}
+.stats-section .sec-label { color: var(--lime-alt); }
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 24px; margin-top: 32px;
+}
+.stat .num {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(36px,5vw,60px); font-weight: 300; letter-spacing: -0.03em;
+  color: var(--lime-alt); line-height: 1;
+  margin: 0 0 10px;
+}
+.stat .lbl { font-size: 13px; line-height: 1.5; color: rgba(255,255,255,0.45); }
+
+/* ── CTA ── */
+.cta-section {
+  padding: clamp(48px,7vw,88px) 0;
+  background: var(--lime);
+}
+.cta-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.cta-copy {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(22px,3vw,36px); font-weight: 400; letter-spacing: -0.015em;
+  color: var(--dark); line-height: 1.2; text-wrap: balance; max-width: 600px;
+}
+.cta-link {
+  font-size: 15px; font-weight: 700;
+  background: var(--dark); color: var(--lime);
+  padding: 12px 24px; border-radius: 999px;
+  transition: opacity .15s;
+}
+.cta-link:hover { opacity: 0.85; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ground);
+  border-top: 1px solid var(--border);
+  padding: clamp(36px,5vw,56px) clamp(20px,4vw,48px);
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.footer-logo { height: 44px; width: auto; }
+.footer-tagline { font-size: 13px; line-height: 1.6; color: var(--ink-mid); max-width: 440px; }
+.footer-legal { font-size: 12px; color: var(--ink-faint); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .verticales-grid { grid-template-columns: 1fr; }
+  .pillars { grid-template-columns: 1fr; }
+  .outcome-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .nav-links { display: none; }
+  .flow-diagram { gap: 0; }
+}
+</style>
+  </Fragment>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="https://www.quantta.mx">
+      <img class="nav-logo" src="/index_files/horizontal-cafe.svg" alt="Quantta">
+    </a>
+    <div class="nav-links">
+      <a href="https://www.quantta.mx/#experiencia">Experiencia</a>
+      <a href="https://www.quantta.mx/#enfoque">Enfoque</a>
+      <a href="https://www.quantta.mx/#metodo">Método</a>
+    </div>
+    <a href="https://www.quantta.mx/#contacto" class="nav-cta">Charlemos</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero mesh">
+  <div class="mesh-blob blob-lime" style="width:30vw;height:30vw;top:-6%;left:-3%;animation-duration:13s;"></div>
+  <div class="mesh-blob blob-blue" style="width:26vw;height:26vw;top:20%;right:-4%;animation-duration:18s;animation-delay:-6s;"></div>
+  <div class="mesh-blob blob-lime" style="width:18vw;height:22vw;bottom:-4%;right:16%;animation-duration:21s;animation-delay:-4s;"></div>
+  <div class="mesh-grain"></div>
+  <div class="container mesh-content">
+    <span class="eyebrow">Caso de éxito · Hospitalidad · CDMX</span>
+    <img class="hero-logo" src="/index_files/pp-logo.png" alt="Proyectos Públicos">
+    <p class="hero-lede">Una operación tan particular que necesitaba su propio sistema — <strong>workplaces, hospedaje y restaurantes</strong> integrados en una sola plataforma hecha a la medida.</p>
+    <div class="chips">
+      <span class="chip"><strong>Mobile first</strong> · operación desde el celular</span>
+      <span class="chip"><strong>3 verticales</strong> · un solo dashboard</span>
+      <span class="chip"><strong>IA</strong> · procesamiento automático por área</span>
+      <span class="chip"><strong>A la medida</strong> · sistemas propios + off-the-shelf</span>
+    </div>
+  </div>
+</section>
+
+<!-- EL RETO -->
+<section class="reto-section">
+  <div class="container">
+    <p class="sec-label">El reto</p>
+    <p class="statement" style="color:#fff;">Sistemas distintos, capturas manuales y sin visibilidad del negocio completo.</p>
+    <div class="contrast-cards">
+      <div class="contrast-card antes">
+        <span class="contrast-badge">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="2" y1="2" x2="8" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="2" x2="2" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Antes
+        </span>
+        <div class="contrast-items">
+          <div class="contrast-item"><span class="ci-dot"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(200,80,60,0.4)" stroke-width="1.2"/><line x1="4.5" y1="4.5" x2="9.5" y2="9.5" stroke="rgba(200,80,60,0.7)" stroke-width="1.2" stroke-linecap="round"/><line x1="9.5" y1="4.5" x2="4.5" y2="9.5" stroke="rgba(200,80,60,0.7)" stroke-width="1.2" stroke-linecap="round"/></svg></span>Sistemas desconectados por vertical — lo que pasaba en un área era invisible para las demás</div>
+          <div class="contrast-item"><span class="ci-dot"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(200,80,60,0.4)" stroke-width="1.2"/><line x1="4.5" y1="4.5" x2="9.5" y2="9.5" stroke="rgba(200,80,60,0.7)" stroke-width="1.2" stroke-linecap="round"/><line x1="9.5" y1="4.5" x2="4.5" y2="9.5" stroke="rgba(200,80,60,0.7)" stroke-width="1.2" stroke-linecap="round"/></svg></span>Seguimiento de eventos y cotizaciones en hojas de cálculo, sin visibilidad de márgenes ni comisiones</div>
+          <div class="contrast-item"><span class="ci-dot"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(200,80,60,0.4)" stroke-width="1.2"/><line x1="4.5" y1="4.5" x2="9.5" y2="9.5" stroke="rgba(200,80,60,0.7)" stroke-width="1.2" stroke-linecap="round"/><line x1="9.5" y1="4.5" x2="4.5" y2="9.5" stroke="rgba(200,80,60,0.7)" stroke-width="1.2" stroke-linecap="round"/></svg></span>Pagos de clientes y estado de contratos sin trazabilidad, gestionados por correo y WhatsApp</div>
+        </div>
+      </div>
+      <div class="contrast-card despues">
+        <span class="contrast-badge">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Con Quantta
+        </span>
+        <div class="contrast-items">
+          <div class="contrast-item"><span class="ci-dot"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(100,160,40,0.4)" stroke-width="1.2"/><polyline points="4,7 6,9 10,5" stroke="rgba(100,160,40,0.8)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Plataforma a la medida que integra sistemas propios y off-the-shelf en una sola interfaz</div>
+          <div class="contrast-item"><span class="ci-dot"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(100,160,40,0.4)" stroke-width="1.2"/><polyline points="4,7 6,9 10,5" stroke="rgba(100,160,40,0.8)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Dashboard consolidado de todas las verticales con márgenes, comisiones y pagos en tiempo real</div>
+          <div class="contrast-item"><span class="ci-dot"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(100,160,40,0.4)" stroke-width="1.2"/><polyline points="4,7 6,9 10,5" stroke="rgba(100,160,40,0.8)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>IA y automatización con widgets por área — el equipo opera desde el celular, sin escritorio</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERTICALES -->
+<section class="verticales-section">
+  <div class="container">
+    <p class="sec-label">Las verticales</p>
+    <p class="statement">Tres operaciones distintas. Una sola plataforma.</p>
+    <div class="verticales-grid">
+      <div class="vertical-card">
+        <div class="vertical-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(198,243,62,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="vertical-name">Workplaces</div>
+        <div class="vertical-desc">Gestión de membresías, pagos y acceso para espacios de trabajo compartido.</div>
+        <div class="vertical-feats">
+          <div class="vertical-feat">Cobros recurrentes y seguimiento de saldo</div>
+          <div class="vertical-feat">Control de acceso integrado</div>
+          <div class="vertical-feat">Facturación y conciliación automática</div>
+        </div>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(198,243,62,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="vertical-name">Hospedaje</div>
+        <div class="vertical-desc">Reservas, contratos digitales y seguimiento de pagos por huésped.</div>
+        <div class="vertical-feats">
+          <div class="vertical-feat">Firma digital de contratos con notificaciones</div>
+          <div class="vertical-feat">Seguimiento de pagos parciales</div>
+          <div class="vertical-feat">Estado de estancia en tiempo real</div>
+        </div>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(198,243,62,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div class="vertical-name">Restaurantes</div>
+        <div class="vertical-desc">Operación, márgenes y comisiones del equipo integrados con el sistema propio.</div>
+        <div class="vertical-feats">
+          <div class="vertical-feat">Gestión de comisiones por evento y servicio</div>
+          <div class="vertical-feat">Márgenes calculados automáticamente</div>
+          <div class="vertical-feat">Integración con sistema de punto de venta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EL SISTEMA -->
+<section class="features-section mesh">
+  <div class="mesh-blob blob-blue" style="width:28vw;height:28vw;top:-6%;right:3%;animation-duration:17s;animation-delay:-4s;opacity:0.18;"></div>
+  <div class="mesh-blob blob-lime" style="width:20vw;height:24vw;bottom:-4%;left:6%;animation-duration:20s;animation-delay:-8s;opacity:0.15;"></div>
+  <div class="mesh-grain"></div>
+  <div class="container mesh-content">
+    <p class="sec-label">El sistema que lo sostiene</p>
+
+    <!-- Flow diagram -->
+    <div class="flow-diagram">
+      <div class="flow-step">
+        <div class="flow-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="flow-label">Lead</div>
+        <div class="flow-sub">Captura automática al flujo comercial</div>
+      </div>
+      <div class="flow-connector">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="flow-step accent">
+        <div class="flow-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(198,243,62,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="flow-label">Evento</div>
+        <div class="flow-sub">Presupuesto, contrato y producción</div>
+      </div>
+      <div class="flow-connector">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(128,169,218,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <div class="flow-label">Pago</div>
+        <div class="flow-sub">Aprobación, dispersión y conciliación</div>
+      </div>
+      <div class="flow-connector">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="flow-step accent">
+        <div class="flow-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(198,243,62,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="flow-label">Comisión</div>
+        <div class="flow-sub">Márgenes y comisiones calculados al cierre</div>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar p1">
+        <div class="pillar-head"><span class="dot"></span><h3>Gestión de eventos</h3></div>
+        <p class="pillar-tag">De la cotización al cierre</p>
+        <div class="feat"><p><strong>Presupuestador de eventos,</strong> el cliente elige su paquete y el contrato se genera automáticamente.</p></div>
+        <div class="feat"><p><strong>Producción con seguimiento,</strong> cada fase del evento con estado, responsable y entregable.</p></div>
+        <div class="feat"><p><strong>Comisiones al cierre,</strong> calculadas automáticamente sobre el margen real del evento.</p></div>
+        <div class="feat"><p><strong>Integración de leads,</strong> cada prospecto entra directo al flujo comercial sin recaptura.</p></div>
+      </div>
+      <div class="pillar p2">
+        <div class="pillar-head"><span class="dot"></span><h3>Control financiero</h3></div>
+        <p class="pillar-tag">De la aprobación al pago</p>
+        <div class="feat"><p><strong>Aprobación por gerente,</strong> colas de revisión con trazabilidad completa de quién autorizó y cuándo.</p></div>
+        <div class="feat"><p><strong>Dashboard por vertical,</strong> workplaces, hospedaje y restaurantes en un solo tablero financiero.</p></div>
+        <div class="feat"><p><strong>Dispersión y conciliación,</strong> pagos ejecutados en bloque y conciliados contra el banco.</p></div>
+        <div class="feat"><p><strong>Márgenes en tiempo real,</strong> sin esperar cierre de mes para saber cómo va cada operación.</p></div>
+      </div>
+      <div class="pillar p3">
+        <div class="pillar-head"><span class="dot"></span><h3>Experiencia del cliente</h3></div>
+        <p class="pillar-tag">Seguimiento sin intermediarios</p>
+        <div class="feat"><p><strong>Seguimiento de pagos,</strong> el cliente ve el estado de su saldo desde su propio portal.</p></div>
+        <div class="feat"><p><strong>Firma de contratos,</strong> flujo digital con notificaciones en cada etapa de la firma.</p></div>
+        <div class="feat"><p><strong>IA y automatización,</strong> widgets específicos por área reducen el trabajo manual a supervisión.</p></div>
+        <div class="feat"><p><strong>Mobile first,</strong> todo el equipo de administración opera desde el celular, sin depender de escritorio.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="advisory-section">
+  <div class="container">
+    <p class="sec-label">La operación, rediseñada</p>
+    <p class="statement">De registros manuales a una operación que se supervisa sola.</p>
+    <div class="outcome-grid">
+      <div class="outcome-item">
+        <p class="outcome-label">Equipo de administración</p>
+        <p class="outcome-desc">2× de optimización en tiempos — los registros y capturas que antes consumían el día ahora son automáticos.</p>
+      </div>
+      <div class="outcome-item">
+        <p class="outcome-label">Visibilidad del negocio</p>
+        <p class="outcome-desc">Dashboard consolidado con las tres verticales: márgenes, pagos y comisiones en una sola vista para la dirección.</p>
+      </div>
+      <div class="outcome-item">
+        <p class="outcome-label">Operación desde el celular</p>
+        <p class="outcome-desc">El equipo aprueba pagos, revisa eventos y hace seguimiento a clientes desde cualquier lugar, sin abrir una laptop.</p>
+      </div>
+    </div>
+    <div class="next-layer">
+      <p><strong>La siguiente capa ya está en marcha:</strong> integración de IA para clasificación automática de gastos por vertical, modelos de comisión adaptativos y alertas proactivas de márgenes por debajo del umbral.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LO QUE LO DISTINGUE -->
+<section class="diff-section">
+  <div class="container">
+    <p class="sec-label">Lo que lo distingue</p>
+    <div class="diff-list">
+      <div class="diff-item"><strong>Hecho a la medida —</strong> sistemas propios integrados con herramientas off-the-shelf; cada vertical con su flujo, sin forzar un solo sistema para todo.</div>
+      <div class="diff-item"><strong>Mobile first real —</strong> el diseño parte del celular, no al revés; el equipo de administración opera sin escritorio.</div>
+      <div class="diff-item"><strong>IA por área —</strong> widgets y funciones específicas para cada vertical reducen el trabajo del equipo a revisar excepciones, no a capturar datos.</div>
+      <div class="diff-item"><strong>Visibilidad consolidada —</strong> tres operaciones distintas, un solo dashboard financiero para la dirección — con el desglose cuando se necesita.</div>
+    </div>
+  </div>
+</section>
+
+<!-- EN NÚMEROS -->
+<section class="stats-section">
+  <div class="container">
+    <p class="sec-label">En números</p>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="num">2×</div>
+        <div class="lbl">optimización de tiempos del equipo de administración</div>
+      </div>
+      <div class="stat">
+        <div class="num">3</div>
+        <div class="lbl">verticales integradas en un solo dashboard financiero</div>
+      </div>
+      <div class="stat">
+        <div class="num">0</div>
+        <div class="lbl">capturas manuales en el flujo de eventos y pagos</div>
+      </div>
+      <div class="stat">
+        <div class="num">100%</div>
+        <div class="lbl">mobile — el equipo opera sin depender de escritorio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <p class="cta-copy">¿Tu operación creció más rápido que los sistemas que la soportan?</p>
+      <a href="https://www.quantta.mx/#contacto" class="cta-link">Hablemos → quantta.mx</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <img class="footer-logo" src="/index_files/slogan-cafe.svg" alt="Quantta">
+    <p class="footer-tagline">Consultoría estratégica para empresas que buscan claridad operativa, financiera y organizacional.</p>
+    <a href="/legal" class="footer-legal">Aviso de Privacidad · Términos de Servicio · Cookies</a>
+  </div>
+</footer>
+
+</CasoLayout>

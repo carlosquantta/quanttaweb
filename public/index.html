@@ -52,8 +52,10 @@ a{color:#c6f33e}a:hover{color:#fff}
 .q-wrap{max-width:1440px;margin:0 auto;padding:0 48px;box-sizing:border-box;position:relative;z-index:1}
 .q-hero{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:72px;align-items:center}
 .q-svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:stretch}
-.q-step{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center;min-height:540px}
+.q-step{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;min-height:380px}
 .q-step.flip .q-step-txt{order:2}
+.q-step-txt{max-width:460px}
+.q-step>:not(.q-step-txt){align-self:center;width:100%}
 .q-g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .q-dash{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:24px}
 .q-ic{display:grid;grid-template-columns:minmax(0,5fr) 48px minmax(0,6fr);gap:16px;align-items:center}
@@ -277,7 +279,7 @@ a{color:#c6f33e}a:hover{color:#fff}
 </div>
 </div>
 
-<div class="q-wrap" style="padding-bottom:128px;display:flex;flex-direction:column;gap:24px;">
+<div class="q-wrap" style="padding-bottom:128px;display:flex;flex-direction:column;gap:140px;">
 
 <!-- 01 -->
 <div class="q-step" data-step="0">
@@ -286,7 +288,7 @@ a{color:#c6f33e}a:hover{color:#fff}
 <h3 style="margin:0;font:400 36px/1.15 var(--font-serif);letter-spacing:-0.02em;color:var(--text-strong);">Su equipo captura <i>sin capturar.</i></h3>
 <p style="margin:0;font-size:17px;line-height:1.6;color:var(--text-muted);max-width:440px;">Mandan la foto del ticket por WhatsApp. La factura se pide sola y se concilia cuando el SAT la recibe.</p>
 </div>
-<div id="q-step-demo-0" style="max-width:460px;width:100%;justify-self:center;"></div>
+<div id="q-step-demo-0"></div>
 </div>
 
 <!-- 02 -->
@@ -928,7 +930,7 @@ function _renderStepDemo0(wa) {
         <span style="font:500 12px/1.2 var(--font-sans);color:var(--text-muted);">WhatsApp · en línea</span>
       </div>
     </div>
-    <div aria-live="polite" style="height:400px;padding:20px;display:flex;flex-direction:column;gap:10px;box-sizing:border-box;overflow:hidden;">
+    <div aria-live="polite" style="min-height:380px;padding:20px;display:flex;flex-direction:column;gap:10px;box-sizing:border-box;overflow:hidden;">
       ${show(wa.photo, `<div class="q-pop" style="align-self:flex-end;max-width:78%;background:rgba(198,243,62,.10);border:1px solid rgba(198,243,62,.2);border-radius:2px;padding:8px;display:flex;flex-direction:column;gap:6px;">
         <div aria-hidden="true" style="height:92px;width:200px;max-width:100%;border-radius:2px;background:repeating-linear-gradient(0deg,#fff 0 9px,#f1ede1 9px 10px);display:flex;flex-direction:column;justify-content:center;padding:0 14px;box-sizing:border-box;gap:4px;font:600 9px/1.2 var(--font-sans);color:#434843;letter-spacing:.06em;"><span>GASOLINERA PASEO MONTEJO</span><span>MAGNA 38.4 L</span><span style="font-size:12px;color:#39290f;">TOTAL $847.00</span></div>
         <span style="font:500 13px/1.4 var(--font-sans);color:var(--text-body);">Factura, por favor</span>

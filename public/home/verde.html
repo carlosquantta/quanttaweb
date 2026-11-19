@@ -26,7 +26,9 @@ a{color:#c6f33e}a:hover{color:#fff}
 .q-svcbtn{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:center;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--border-hair);padding:18px 0;cursor:pointer;color:var(--text-muted);font-family:var(--font-sans);position:relative}
 .q-svcbtn.on{color:var(--text-strong)}
 .q-svcbtn:focus-visible,.q-btnlike:focus-visible{outline:2px solid #c6f33e;outline-offset:2px}
-.q-bar{position:absolute;left:0;bottom:-1px;height:2px;background:#c6f33e;transition:width 1.3s cubic-bezier(0.25,0.1,0.25,1)}
+.q-bar{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:#c6f33e}
+.q-svcbtn.on .q-bar{animation:q-barfill 7.8s linear forwards}
+@keyframes q-barfill{from{width:0}to{width:100%}}
 .q-row{opacity:0;transform:translateY(8px);transition:opacity .5s var(--ease-out-expo),transform .5s var(--ease-out-expo)}
 .q-row.on{opacity:1;transform:none}
 .q-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:2px;font:700 10px/1 var(--font-sans);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;transition:background .4s,color .4s}
@@ -48,9 +50,10 @@ a{color:#c6f33e}a:hover{color:#fff}
 .q-strike{transition:opacity .5s;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-position:0 55%;background-size:0 1px}
 .q-strike.on{opacity:.45;background-size:100% 1px;transition:background-size .6s var(--ease-out-expo),opacity .5s}
 .q-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
-.q-blob{position:absolute;border-radius:50%;filter:blur(90px);will-change:transform;animation:q-drift 24s ease-in-out infinite alternate}
+.q-blob{position:absolute;border-radius:50%;will-change:transform;animation:q-drift 24s ease-in-out infinite alternate}
 @keyframes q-drift{0%{transform:translate(0,0) scale(1)}33%{transform:translate(8%,6%) scale(1.15)}66%{transform:translate(-6%,10%) scale(.92)}100%{transform:translate(4%,-6%) scale(1.08)}}
-.q-grain{position:absolute;inset:0;width:100%;height:100%;opacity:.07;mix-blend-mode:screen}
+.q-grain{position:absolute;inset:0;opacity:.05;pointer-events:none;background-repeat:repeat;background-size:128px 128px}
+.q-root.q-off .q-blob,.q-root.q-off .q-tblk,.q-root.q-off .q-tscroll,.q-root.q-off .q-tl,.q-root.q-off .q-th,.q-root.q-off .q-flow path,.q-root.q-off .q-photo,.q-root.q-off .q-city.a,.q-root.q-off .q-city.b,.q-root.q-off .q-cityl.a,.q-root.q-off .q-cityl.b{animation-play-state:paused}
 .q-flow path{stroke-dasharray:6 14;animation:q-flow 9s linear infinite}
 .q-flow path:nth-child(2n){animation-duration:13s;animation-direction:reverse}
 @keyframes q-flow{to{stroke-dashoffset:-400}}
@@ -118,16 +121,12 @@ a{color:#c6f33e}a:hover{color:#fff}
 <body>
 
 <div class="q-root">
-<svg width="0" height="0" style="position:absolute;" aria-hidden="true"><filter id="q-noise"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
 
 <div class="q-bg" aria-hidden="true">
-<div class="q-blob" style="width:900px;height:900px;left:-300px;top:-360px;background:rgba(42,66,50,.85);"></div>
-<div class="q-blob" style="width:700px;height:700px;right:-240px;top:6%;background:rgba(128,169,218,.14);animation-duration:28s;animation-delay:-6s;"></div>
-<div class="q-blob" style="width:760px;height:760px;left:-260px;top:24%;background:rgba(57,41,15,.55);animation-duration:32s;animation-delay:-12s;"></div>
-<div class="q-blob" style="width:640px;height:640px;right:-200px;top:42%;background:rgba(42,66,50,.85);animation-duration:26s;animation-delay:-4s;"></div>
-<div class="q-blob" style="width:720px;height:720px;left:20%;top:60%;background:rgba(128,169,218,.14);animation-duration:30s;animation-delay:-15s;"></div>
-<div class="q-blob" style="width:640px;height:640px;right:-180px;top:78%;background:rgba(198,243,62,.08);animation-duration:22s;animation-delay:-9s;"></div>
-<svg class="q-grain"><rect width="100%" height="100%" filter="url(#q-noise)"></rect></svg>
+<div class="q-blob" style="width:900px;height:900px;left:-300px;top:-360px;background:radial-gradient(circle,rgba(42,66,50,.85) 0%,transparent 70%);"></div>
+<div class="q-blob" style="width:760px;height:760px;right:-240px;top:28%;background:radial-gradient(circle,rgba(128,169,218,.16) 0%,transparent 70%);animation-duration:30s;animation-delay:-10s;"></div>
+<div class="q-blob" style="width:720px;height:720px;left:8%;top:66%;background:radial-gradient(circle,rgba(198,243,62,.10) 0%,transparent 70%);animation-duration:26s;animation-delay:-6s;"></div>
+<div class="q-grain"></div>
 </div>
 
 <!-- NAV -->
@@ -421,8 +420,8 @@ a{color:#c6f33e}a:hover{color:#fff}
 <section id="contacto" class="q-wrap q-sec" style="padding-top:64px;padding-bottom:128px;">
 <div class="rv q-pad" style="position:relative;overflow:hidden;border:1px solid rgba(198,243,62,.25);border-radius:2px;padding:72px;">
 <div class="q-bg" aria-hidden="true">
-<div class="q-blob" style="width:520px;height:520px;right:-160px;top:-240px;background:rgba(198,243,62,.14);"></div>
-<div class="q-blob" style="width:420px;height:420px;left:-120px;bottom:-220px;background:rgba(128,169,218,.16);animation-delay:-10s;"></div>
+<div class="q-blob" style="width:520px;height:520px;right:-160px;top:-240px;background:radial-gradient(circle,rgba(198,243,62,.14) 0%,transparent 70%);"></div>
+<div class="q-blob" style="width:420px;height:420px;left:-120px;bottom:-220px;background:radial-gradient(circle,rgba(128,169,218,.16) 0%,transparent 70%);animation-delay:-10s;"></div>
 </div>
 <div style="position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:48px;flex-wrap:wrap;">
 <div style="display:flex;flex-direction:column;gap:20px;max-width:640px;">
@@ -478,6 +477,7 @@ class Component extends DCLogic {
 
   componentDidMount() {
     this._iv = setInterval(() => {
+      if (document.hidden) return;
       this.setState((s) => {
         const t = s.t + 1;
         let svc = s.svc, svcStart = s.svcStart;
@@ -694,7 +694,7 @@ function _renderSvcTabs(svc) {
         <span class="q-svcn" style="font:500 22px/1.2 var(--font-serif);white-space:nowrap;">${s.n}</span>
         <span class="q-svcd" style="font:500 13px/1.4 var(--font-sans);color:var(--text-muted);">${s.short}</span>
       </span>
-      <span class="q-bar" style="width:${s.prog};"></span>
+      <span class="q-bar"></span>
     </button>`).join('');
 }
 
@@ -801,9 +801,8 @@ function _renderSvcPanel(vals) {
   else if (k.dev) demoHtml = _demoHtml_dev(dev);
   return `
     <div class="q-bg" aria-hidden="true">
-      <div class="q-blob" style="width:420px;height:420px;right:-140px;top:-180px;background:rgba(198,243,62,.10);"></div>
-      <div class="q-blob" style="width:320px;height:320px;left:-100px;bottom:-140px;background:rgba(128,169,218,.2);animation-delay:-8s;"></div>
-      <svg class="q-grain"><rect width="100%" height="100%" filter="url(#q-noise)"></rect></svg>
+      <div class="q-blob" style="width:420px;height:420px;right:-140px;top:-180px;background:radial-gradient(circle,rgba(198,243,62,.10) 0%,transparent 70%);"></div>
+      <div class="q-blob" style="width:320px;height:320px;left:-100px;bottom:-140px;background:radial-gradient(circle,rgba(128,169,218,.2) 0%,transparent 70%);animation-delay:-8s;"></div>
     </div>
     <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:14px;">
       <span style="font:700 11px/1 var(--font-sans);letter-spacing:.1em;text-transform:uppercase;color:#c6f33e;">${svc.cur.num} · ${svc.cur.k}</span>
@@ -912,9 +911,6 @@ Component.prototype._patchPage = function(vals) {
     if (activeIdx !== tabsEl._lastSvc) {
       tabsEl.innerHTML = _renderSvcTabs(svc);
       tabsEl._lastSvc = activeIdx;
-    } else {
-      const bar = tabsEl.querySelector('.q-svcbtn.on .q-bar');
-      if (bar) bar.style.width = svc.items[activeIdx].prog;
     }
   }
 
@@ -1010,6 +1006,31 @@ document.getElementById('q-per-q').addEventListener('click', () => comp.setState
     setTimeout(restart, 42000);
   }
   setTimeout(restart, 42000);
+})();
+
+// Static grain: generate noise once, no live SVG filter
+(function() {
+  try {
+    const c = document.createElement('canvas'); c.width = c.height = 128;
+    const x = c.getContext('2d'); const d = x.createImageData(128, 128);
+    for (let i = 0; i < d.data.length; i += 4) { const v = (Math.random() * 255) | 0; d.data[i] = d.data[i+1] = d.data[i+2] = v; d.data[i+3] = 255; }
+    x.putImageData(d, 0, 0);
+    const u = 'url(' + c.toDataURL() + ')';
+    document.querySelectorAll('.q-grain').forEach(g => { g.style.backgroundImage = u; });
+  } catch (e) {}
+})();
+
+// Pause decorative animations when the tab is hidden or the hero is off-screen
+(function() {
+  const root = document.querySelector('.q-root');
+  const hero = document.querySelector('.q-herosec');
+  if (!root) return;
+  let offscreen = false;
+  const sync = () => root.classList.toggle('q-off', document.hidden || offscreen);
+  document.addEventListener('visibilitychange', sync);
+  if (hero && 'IntersectionObserver' in window) {
+    new IntersectionObserver(es => { offscreen = !es[0].isIntersecting; sync(); }, { threshold: 0 }).observe(hero);
+  }
 })();
 </script>
 </body>

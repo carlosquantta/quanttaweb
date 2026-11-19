@@ -91,6 +91,6 @@
 .body-sm { font-family: var(--font-sans); font-size: 14px; line-height: 1.6; font-weight: 400; }
 .label { font-family: var(--font-sans); font-size: 12px; line-height: 1; font-weight: 700; letter-spacing: 0.1em; }
 .data { font-family: var(--font-sans); font-size: 14px; line-height: 1; font-weight: 600; }
-@font-face { font-family: 'Manrope'; src: url('assets/fonts/manrope-normal-400.woff2') format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Newsreader'; src: url('assets/fonts/newsreader-normal-400.woff2') format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Newsreader'; src: url('assets/fonts/newsreader-italic-400.woff2') format('woff2'); font-weight: 400 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('fonts/manrope-normal-400.woff2') format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Newsreader'; src: url('fonts/newsreader-normal-400.woff2') format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Newsreader'; src: url('fonts/newsreader-italic-400.woff2') format('woff2'); font-weight: 400 700; font-style: italic; font-display: swap; }

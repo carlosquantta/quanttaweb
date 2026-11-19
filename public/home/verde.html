@@ -449,7 +449,19 @@ a{color:#c6f33e}a:hover{color:#fff}
 
 </div><!-- .q-root -->
 
+<script src="morphdom-umd.min.js"></script>
 <script>
+// Morph instead of replacing innerHTML: preserves nodes so CSS animations/transitions
+// don't restart each tick (fixes the 650ms flicker). Skips untouched blocks entirely.
+function patch(el, html) {
+  if (!el || el.__html === html) return;
+  el.__html = html;
+  if (typeof morphdom !== 'function') { el.innerHTML = html; return; }
+  const next = el.cloneNode(false);
+  next.innerHTML = html;
+  morphdom(el, next, { childrenOnly: true });
+}
+
 class DCLogic {
   constructor() { this._props = {}; }
   get props() { return this._props; }
@@ -915,18 +927,13 @@ Component.prototype._patchPage = function(vals) {
   }
 
   // Svc panel
-  const panelEl = document.getElementById('q-svc-panel');
-  if (panelEl) panelEl.innerHTML = _renderSvcPanel(vals);
+  patch(document.getElementById('q-svc-panel'), _renderSvcPanel(vals));
 
   // Step demos
-  const d0 = document.getElementById('q-step-demo-0');
-  if (d0) d0.innerHTML = _renderStepDemo0(wa);
-  const d1 = document.getElementById('q-step-demo-1');
-  if (d1) d1.innerHTML = _renderStepDemo1(fact);
-  const d2 = document.getElementById('q-step-demo-2');
-  if (d2) d2.innerHTML = _renderStepDemo2(ic);
-  const d3 = document.getElementById('q-step-demo-3');
-  if (d3) d3.innerHTML = _renderStepDemo3(portal);
+  patch(document.getElementById('q-step-demo-0'), _renderStepDemo0(wa));
+  patch(document.getElementById('q-step-demo-1'), _renderStepDemo1(fact));
+  patch(document.getElementById('q-step-demo-2'), _renderStepDemo2(ic));
+  patch(document.getElementById('q-step-demo-3'), _renderStepDemo3(portal));
 
   // Dashboard class
   const dashEl = document.getElementById('q-dash');
@@ -947,8 +954,7 @@ Component.prototype._patchPage = function(vals) {
   if (pqEl) { pqEl.style.background = per.qBg; pqEl.style.color = per.qFg; pqEl.setAttribute('aria-pressed', per.isQ); }
 
   // KPIs
-  const kpisEl = document.getElementById('q-kpis');
-  if (kpisEl) kpisEl.innerHTML = _renderKpis(kpis);
+  patch(document.getElementById('q-kpis'), _renderKpis(kpis));
 
   // Chart cursor
   const clEl = document.getElementById('q-cur-line');
